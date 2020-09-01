@@ -6,7 +6,7 @@ export default function ListItem({kind, date, time, from, to}) {
     <List kind={kind}>
       <KindOfRide>{kind}</KindOfRide>
         <RideEntry kind={kind}>
-          <p>am</p> 
+          <p>amu</p> 
           {date} 
         </RideEntry>
     </List>
