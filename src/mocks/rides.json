@@ -1,0 +1,81 @@
+    [
+      {
+        "_id": "5f2bcc8234d1847701asdffe341e",
+        "kind": "gebuchte Fahrt",
+        "date": "25.08.2020",
+        "time": "15:10",
+        "from": "Hamburg",
+        "to":  "Frankfurt"
+      }
+      ,  
+      {
+      "_id": "5f2bcc823asdf4d1847701fe341e",
+      "kind": "angebotene Fahrt",
+      "sc": "p",
+      "date": "25.08.2020",
+      "time": "15:10",
+      "from": "Hamburg",
+      "to":  "Frankfurt"
+  
+    }
+    ,
+    {
+    "_id": "lasdf5f2bcc8234dhh18asdf47701fe3413",
+    "kind": "gebuchte Fahrt",
+    "sc": "b",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Hamburg",
+    "to":  "Frankfurt"
+  }
+  ,
+  {
+    "_id": "5f2bcc8234dhh18asdf47701fe3413",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Warum",
+    "to":  "Dorthin",
+    "kind": "gebuchte Fahrt"
+  },
+  {
+    "_id": "5f2bcc8234d184ff7701fe341e",
+    "kind": "angebotene Fahrt",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Hamburg",
+    "to":  "Frankfurt"
+  }
+  ,
+  {
+    "_id": "5f2bcc8234ssd184asdf7701fe3413",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Warum",
+    "to":  "Dorthin",
+    "kind": "angebotene Fahrt"
+  },
+  {
+    "_id": "5f2bcc8234d1847701faae341e",
+    "kind": "angebotene Fahrt",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Hamburg",
+    "to":  "Frankfurt"
+  },
+  {
+    "_id": "5f2bcc8234d1847701asdffe341e",
+    "kind": "gebuchte Fahrt",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Hamburg",
+    "to":  "Frankfurt"
+  }
+  ,  {
+    "_id": "5f2bcc8234d1847701faae341e",
+    "kind": "angebotene Fahrt",
+    "date": "25.08.2020",
+    "time": "15:10",
+    "from": "Hamburg",
+    "to":  "Frankfurt"
+  }
+]

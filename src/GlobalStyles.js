@@ -8,6 +8,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 112.5%;
+    font-weight: 100;
 }
 
 body {

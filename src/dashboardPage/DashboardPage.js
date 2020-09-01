@@ -1,14 +1,10 @@
 import React from 'react'
-// import styled from 'styled-components'
-import BookedRides from './BookedRides'
-import ProvidedRides from './ProvidedRides'
+import Rides from './Rides'
+
 
 export default function DashboardPage() {
 return ( 
-    <> 
-        <BookedRides />
-        <ProvidedRides />
-    </>
+     <Rides />
 )
 }
 
