@@ -19,7 +19,7 @@ const PageLayout = styled.div`
   border-radius: 0 0 40px 40px;
   overflow: scroll;
   scroll-behavior: smooth;
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 2px 2px rgba(37, 37, 43, 0.9);
 ` 
 
 const Pagebody = styled.div`

@@ -6,7 +6,7 @@ export default function ListItem({kind, date, time, from, to}) {
     <List kind={kind}>
       <KindOfRide>{kind}</KindOfRide>
         <RideEntry kind={kind}>
-          <p>amu</p> 
+          <p>am</p> 
           {date} 
         </RideEntry>
     </List>
@@ -19,7 +19,7 @@ const List = styled.div`
   width: 60vw;
   height: auto;
   font-size: 0.6em;
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);   
+  box-shadow: 0 2px 2px 2px rgba(37, 37, 37, 0.3);   
   border: none;
   border-radius: ${({kind}) => kind === 'gebuchte Fahrt' ? '0 25px 25px 0' : '25px 0 0 25px'};
   background: var(--back-light);
@@ -31,7 +31,7 @@ const List = styled.div`
   
   &:last-child {
     margin-bottom: 30px;
-    border-radius: ${({kind}) => kind === 'gebuchte Fahrt' ? '0 25px 25px' : '25px 0 25px 25px'};
+    border-radius: ${({kind}) => kind === 'gebuchte Fahrt' ? '0 25px 25px' : '25px 25px 0 25px'};
   }
 `
 
@@ -46,4 +46,5 @@ const KindOfRide = styled.h3`
 const RideEntry = styled.p`
   font-weight: 300;
   color: var(--button-nav);
+  width: auto;
 `

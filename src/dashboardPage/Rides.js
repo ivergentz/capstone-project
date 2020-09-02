@@ -23,7 +23,7 @@ export default function Rides() {
         key={rides._id} 
         kind={rides.kind} 
         date={rides.date} 
-        time={rides.time}
+        time={rides.time} 
         from={rides.from}
         to={rides.to}
         sc={rides.sc}

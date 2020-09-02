@@ -1,6 +1,5 @@
 import React from 'react'
 import  ListItem from '../dashboardPage/ListItem'
-import GlobalStyles from '../GlobalStyles'
 
 
 export default {
@@ -9,6 +8,10 @@ export default {
 }
 
 const Template = (args) => 
-    <ListItem {...args}/> 
+    
+    <ListItem {...args}/>
+   
+   
 
-export const Item = Template.bind({});
+export const Ride = Template.bind({});
+
