@@ -8,9 +8,10 @@ export default function ListItem({kind, date, time, from, to}) {
       <KindOfRide>{kind}</KindOfRide>
         <RideEntry kind={kind}>
           <div>{date}</div>
-          <div>{time}</div>
+          {isToggled && <div>{time}</div>}
           <div>{from}</div>
-          <div>{to}</div>
+          {isToggled && <div>{to}</div>}
+          {isToggled && <div>mor ride details</div>}
         </RideEntry>
     </List>
   )
