@@ -19,7 +19,6 @@ export default function ListItem({kind, date, time, from, to}) {
   function toggleRideDetails() {
     setIsToggled(!isToggled)
   }
-
 }
 
 const List = styled.div`
