@@ -10,6 +10,7 @@ exports[`renders correctly 1`] = `
     <div
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -20,15 +21,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="gebuchte Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -39,15 +49,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="angebotene Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -58,15 +77,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="gebuchte Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -77,15 +105,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="gebuchte Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Warum
+        </div>
+        <div>
+          Dorthin
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -96,15 +133,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="angebotene Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -115,15 +161,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="angebotene Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Warum
+        </div>
+        <div>
+          Dorthin
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -134,15 +189,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="angebotene Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -153,15 +217,24 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="gebuchte Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
     <div
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
+      onClick={[Function]}
     >
       <h3
         className="sc-AxirZ ipKHmU"
@@ -172,10 +245,18 @@ exports[`renders correctly 1`] = `
         className="sc-AxiKw jmdjKA"
         kind="angebotene Fahrt"
       >
-        <p>
-          am
-        </p>
-        25.08.2020
+        <div>
+          25.08.2020
+        </div>
+        <div>
+          15:10
+        </div>
+        <div>
+          Hamburg
+        </div>
+        <div>
+          Frankfurt
+        </div>
       </p>
     </div>
   </div>

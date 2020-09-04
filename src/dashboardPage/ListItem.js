@@ -1,16 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 
-export default function ListItem({kind, date}) {
+export default function ListItem({kind, date, time, from, to}) {
+  const [isToggled, setIsToggled] = useState(false)
   return (
-    <List kind={kind}>
+    <List onClick={toggleRideDetails} kind={kind}>
       <KindOfRide>{kind}</KindOfRide>
         <RideEntry kind={kind}>
-          <p>am</p> 
-          {date} 
+          <div>{date}</div>
+          <div>{time}</div>
+          <div>{from}</div>
+          <div>{to}</div>
         </RideEntry>
     </List>
   )
+
+  function toggleRideDetails() {
+    setIsToggled(!isToggled)
+  }
+
 }
 
 const List = styled.div`
