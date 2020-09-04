@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="sc-AxjAm kHribK"
+    kind="gebuchte Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      gebuchte Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="gebuchte Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm bYZKNw"
+    kind="angebotene Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      angebotene Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="angebotene Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm kHribK"
+    kind="gebuchte Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      gebuchte Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="gebuchte Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm kHribK"
+    kind="gebuchte Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      gebuchte Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="gebuchte Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm bYZKNw"
+    kind="angebotene Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      angebotene Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="angebotene Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm bYZKNw"
+    kind="angebotene Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      angebotene Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="angebotene Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm bYZKNw"
+    kind="angebotene Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      angebotene Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="angebotene Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm kHribK"
+    kind="gebuchte Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      gebuchte Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="gebuchte Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+  <div
+    className="sc-AxjAm bYZKNw"
+    kind="angebotene Fahrt"
+  >
+    <h3
+      className="sc-AxirZ ipKHmU"
+    >
+      angebotene Fahrt
+    </h3>
+    <p
+      className="sc-AxiKw jmdjKA"
+      kind="angebotene Fahrt"
+    >
+      <p>
+        am
+      </p>
+      25.08.2020
+    </p>
+  </div>,
+]
+`;

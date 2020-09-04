@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function ListItem({kind, date, time, from, to}) {
+export default function ListItem({kind, date}) {
   return (
     <List kind={kind}>
       <KindOfRide>{kind}</KindOfRide>

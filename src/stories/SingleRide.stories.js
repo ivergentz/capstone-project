@@ -13,4 +13,5 @@ const Template = (args) =>
    
    
 
-export const Ride = Template.bind({});
+export const Ride = Template.bind({})
+//hier die children übergenben?!

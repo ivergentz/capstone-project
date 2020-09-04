@@ -26,7 +26,6 @@ export default function Rides() {
         time={rides.time} 
         from={rides.from}
         to={rides.to}
-        sc={rides.sc}
       />
     ))}
     </>

@@ -9,4 +9,4 @@ export default {
 const Template = (args) =>
     <DashboardPage {...args}/>   
 
-export const Dashboard = Template.bind({})
+export const RidesList = Template.bind({})
