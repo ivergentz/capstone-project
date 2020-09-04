@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import ListItem from './ListItem'
 
 Rides.propTypes = {
-  rides: PropTypes.arrayOf(PropTypes.object).isRequired,
-  _id: PropTypes.string.isRequired,
-  kind: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  from: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-  sc: PropTypes.string.isRequired,
+  rides: PropTypes.arrayOf(PropTypes.object),
+  _id: PropTypes.string,
+  kind: PropTypes.string,
+  date: PropTypes.string,
+  time: PropTypes.string,
+  from: PropTypes.string,
+  to: PropTypes.string,
+  sc: PropTypes.string,
 }
 
 

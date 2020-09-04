@@ -3,7 +3,7 @@ import  ListItem from '../dashboardPage/ListItem'
 
 
 export default {
-  title: 'Rides',
+  title: 'Single Ride',
   component: ListItem,
 }
 
@@ -14,4 +14,3 @@ const Template = (args) =>
    
 
 export const Ride = Template.bind({});
-
