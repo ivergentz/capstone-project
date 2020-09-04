@@ -2,11 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-AxhUy cYPgHd"
+  className="sc-AxheI fXtOXJ"
 >
   <div
-    className="sc-AxhCb kYmxMP"
+    className="sc-AxgMl gWxAIw"
   >
+    <img
+      alt="search icon"
+      className="sc-AxhCb fTgGhQ"
+      height="30"
+      onClick={[Function]}
+      src="search.svg"
+      width="30"
+    />
     <div
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"

@@ -2,6 +2,14 @@
 
 exports[`renders correctly 1`] = `
 Array [
+  <img
+    alt="search icon"
+    className="sc-AxhCb fTgGhQ"
+    height="30"
+    onClick={[Function]}
+    src="search.svg"
+    width="30"
+  />,
   <div
     className="sc-AxjAm kHribK"
     kind="gebuchte Fahrt"
