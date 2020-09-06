@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-AxheI fXtOXJ"
+  className="sc-Axmtr eLbKsq"
 >
   <div
-    className="sc-AxgMl gWxAIw"
+    className="sc-AxheI ccvBlW"
   >
     <img
       alt="search icon"
@@ -214,5 +214,27 @@ exports[`renders correctly 1`] = `
       </p>
     </div>
   </div>
+  <nav
+    className="sc-AxgMl jyclxm"
+  >
+    <img
+      alt="search icon"
+      height="40"
+      src="search.svg"
+      width="40"
+    />
+    <img
+      alt="home icon"
+      height="40"
+      src="train.svg"
+      width="40"
+    />
+    <img
+      alt="add icon"
+      height="40"
+      src="plus.svg"
+      width="40"
+    />
+  </nav>
 </div>
 `;

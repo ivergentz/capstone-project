@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import DashboardPage from './dashboardPage/DashboardPage'
+import Navbar from './navigation/Navigation';
 
 export default function App() {
   return ( 
@@ -8,6 +9,7 @@ export default function App() {
     <PageLayout>
       <DashboardPage />
     </PageLayout>
+    <Navbar />
   </Pagebody>
   )
 }
@@ -27,3 +29,4 @@ const Pagebody = styled.div`
   height: 100vh;
  
 `
+//grid zum vereinfachen des Layouts

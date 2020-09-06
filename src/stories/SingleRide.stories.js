@@ -1,6 +1,6 @@
 import React from 'react'
-import  ListItem from '../dashboardPage/ListItem'
-
+import  ListItem from '../dashboardPage/RidesListItem'
+import rides from '../mocks/rides.json'
 
 export default {
   title: 'Single Ride',
@@ -12,6 +12,9 @@ const Template = (args) =>
     <ListItem {...args}/>
    
    
+const [rideProps] = rides
 
 export const Ride = Template.bind({})
-//hier die children übergenben?!
+Ride.args = {
+  ...rideProps
+}

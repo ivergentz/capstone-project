@@ -1,19 +1,28 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
+ListItem.propTypes = {
+  kind: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  from: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+}
 
 export default function ListItem({kind, date, time, from, to}) {
   const [isToggled, setIsToggled] = useState(false)
   return (
-    <List onClick={toggleRideDetails} kind={kind}>
-      <KindOfRide>{kind}</KindOfRide>
+    <StyledListItem onClick={toggleRideDetails} kind={kind}>
+      <RideHeading>{kind}</RideHeading>
         <RideEntry kind={kind}>
           <div>{date}</div>
           {isToggled && <div>{time}</div>}
           <div>{from}</div>
           {isToggled && <div>{to}</div>}
-          {isToggled && <div>mor ride details</div>}
+          {isToggled && <div>more ride details</div>}
         </RideEntry>
-    </List>
+    </StyledListItem>
   )
 
   function toggleRideDetails() {
@@ -21,7 +30,9 @@ export default function ListItem({kind, date, time, from, to}) {
   }
 }
 
-const List = styled.div`
+// flexbox, dann items anordnen (justify/align self)
+
+const StyledListItem = styled.div`
   margin: ${({kind}) => kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
   padding: 20px;
   width: 60vw;
@@ -43,7 +54,7 @@ const List = styled.div`
   }
 `
 
-const KindOfRide = styled.h3`
+const RideHeading = styled.h3`
   display: flex;
   align-content: center;
   font-size: 1.2em;

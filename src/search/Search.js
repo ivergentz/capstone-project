@@ -8,7 +8,7 @@ export default function Search() {
   return (  
     <>
       <Image src={search} onClick={toggleSearchBar} alt="search icon" width="30" height="30" ></Image>
-      {isToggled && <Input placeholder="Fahrt suchen" ></Input>
+      {isToggled && <Input placeholder="Deine Fahrten durchsuchen" ></Input>
          }
     </>
     ) 
@@ -24,6 +24,9 @@ display: inline;
 `
 
 const Input = styled.input`
-margin-bottom: 10px;
-width: 100vw;
+display: flex;
+margin: auto;
+width: 80vw;
+font-size: 0.7em;
+
 `
