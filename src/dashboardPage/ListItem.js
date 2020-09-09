@@ -1,12 +1,22 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
+ListItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  kind: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  from: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+}
 
 export default function ListItem({kind, date, time, from, to}) {
   const [isToggled, setIsToggled] = useState(false)
   return (
     <List onClick={toggleRideDetails} kind={kind}>
       <KindOfRide>{kind}</KindOfRide>
-        <RideEntry kind={kind}>
+        <RideEntry>
           <div>{date}</div>
           {isToggled && <div>{time}</div>}
           <div>{from}</div>
