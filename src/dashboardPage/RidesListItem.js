@@ -1,19 +1,28 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
-export default function ListItem({kind, date}) {
+ListItem.propTypes = {
+  kind: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  from: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired
+}
+
+export default function ListItem({kind, date, time, from, to}){
   return (
-    <List kind={kind}>
-      <KindOfRide>{kind}</KindOfRide>
+    <StyledListItem kind={kind}>
+      <RideHeading>{kind}</RideHeading>
         <RideEntry kind={kind}>
           <p>am</p> 
           {date} 
         </RideEntry>
-    </List>
+    </StyledListItem>
   )
 }
 
-const List = styled.div`
+const StyledListItem = styled.div`
   margin: ${({kind}) => kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
   padding: 20px;
   width: 60vw;
@@ -35,7 +44,7 @@ const List = styled.div`
   }
 `
 
-const KindOfRide = styled.h3`
+const RideHeading = styled.h3`
   display: flex;
   align-content: center;
   font-size: 1.2em;

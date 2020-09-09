@@ -1,5 +1,6 @@
 import React from 'react'
-import  ListItem from '../dashboardPage/ListItem'
+import  ListItem from '../dashboardPage/RidesListItem'
+import rides from '../data/rides.json'
 
 
 export default {
@@ -9,9 +10,11 @@ export default {
 
 const Template = (args) => 
     
-    <ListItem {...args}/>
+    <ListItem {...args} />
    
-   
+ const [rideProps] = rides
 
 export const Ride = Template.bind({})
-//hier die children übergenben?!
+Ride.args = {
+  ...rideProps
+}
