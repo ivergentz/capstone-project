@@ -6,7 +6,7 @@ import rides from '../data/rides.json'
 export default function DashboardPage() {
 return ( 
      <>
-          <Rides rides={rides} />
+      <Rides rides={rides} />
      </>
 )
 }
