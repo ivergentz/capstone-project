@@ -5,6 +5,7 @@ Array [
   <div
     className="sc-AxjAm kHribK"
     kind="gebuchte Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -15,15 +16,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="gebuchte Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm bYZKNw"
     kind="angebotene Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -34,15 +38,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="angebotene Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm kHribK"
     kind="gebuchte Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -53,15 +60,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="gebuchte Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm kHribK"
     kind="gebuchte Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -72,15 +82,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="gebuchte Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Warum
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm bYZKNw"
     kind="angebotene Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -91,15 +104,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="angebotene Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm bYZKNw"
     kind="angebotene Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -110,15 +126,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="angebotene Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Warum
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm bYZKNw"
     kind="angebotene Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -129,15 +148,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="angebotene Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm kHribK"
     kind="gebuchte Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -148,15 +170,18 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="gebuchte Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
   <div
     className="sc-AxjAm bYZKNw"
     kind="angebotene Fahrt"
+    onClick={[Function]}
   >
     <h3
       className="sc-AxirZ ipKHmU"
@@ -167,10 +192,12 @@ Array [
       className="sc-AxiKw jmdjKA"
       kind="angebotene Fahrt"
     >
-      <p>
-        am
-      </p>
-      25.08.2020
+      <div>
+        25.08.2020
+      </div>
+      <div>
+        Hamburg
+      </div>
     </p>
   </div>,
 ]

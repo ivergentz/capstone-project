@@ -1,25 +1,34 @@
-import PropTypes from 'prop-types'
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 ListItem.propTypes = {
+  id: PropTypes.string.isRequired,
   kind: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
   from: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 }
 
-export default function ListItem({kind, date, time, from, to}){
+export default function ListItem({kind, date, time, from, to}) {
+  const [isToggled, setIsToggled] = useState(false)
   return (
-    <StyledListItem kind={kind}>
+    <StyledListItem onClick={toggleRideDetails} kind={kind}>
       <RideHeading>{kind}</RideHeading>
-        <RideEntry kind={kind}>
-          <p>am</p> 
-          {date} 
+        <RideEntry>
+          <div>{date}</div>
+          {isToggled && <div>{time}</div>}
+          <div>{from}</div>
+          {isToggled && <div>{to}</div>}
+          {isToggled && <div>mor ride details</div>}
         </RideEntry>
     </StyledListItem>
   )
+
+  function toggleRideDetails() {
+    setIsToggled(!isToggled)
+  }
 }
 
 const StyledListItem = styled.div`
