@@ -21,7 +21,7 @@ export default function ListItem({kind, date, time, from, to}) {
           {isToggled && <div>{time}</div>}
           <div>{from}</div>
           {isToggled && <div>{to}</div>}
-          {isToggled && <div>mor ride details</div>}
+          {isToggled && <div>more ride details</div>}
         </RideEntry>
     </StyledListItem>
   )
