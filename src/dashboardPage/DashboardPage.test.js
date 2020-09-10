@@ -6,5 +6,5 @@ it('renders correctly', () => {
   const tree = renderer
     .create(<DashboardPage />)
   
-  expect(tree).toMatchSnapshot();
-});
+  expect(tree).toMatchSnapshot()
+})
