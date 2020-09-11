@@ -21,6 +21,6 @@
         })
 
         it('toggles the details', () => {
-          
+        cy.get('section').click({multiple: true}).contains('more')
         })
     }) 
