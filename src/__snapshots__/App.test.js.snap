@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
   <div
     className="sc-AxhCb kYmxMP"
   >
-    <div
+    <section
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
       onClick={[Function]}
@@ -20,15 +20,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
       onClick={[Function]}
@@ -41,15 +41,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
       onClick={[Function]}
@@ -62,15 +62,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
       onClick={[Function]}
@@ -83,15 +83,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Warum
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
       onClick={[Function]}
@@ -104,15 +104,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
       onClick={[Function]}
@@ -125,15 +125,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Warum
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
       onClick={[Function]}
@@ -146,15 +146,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm kHribK"
       kind="gebuchte Fahrt"
       onClick={[Function]}
@@ -167,15 +167,15 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
+    </section>
+    <section
       className="sc-AxjAm bYZKNw"
       kind="angebotene Fahrt"
       onClick={[Function]}
@@ -188,14 +188,14 @@ exports[`renders correctly 1`] = `
       <p
         className="sc-AxiKw jmdjKA"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
+    </section>
   </div>
 </div>
 `;

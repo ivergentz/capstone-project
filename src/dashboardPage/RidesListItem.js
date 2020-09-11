@@ -17,11 +17,11 @@ export default function ListItem({kind, date, time, from, to}) {
     <StyledListItem onClick={toggleRideDetails} kind={kind}>
       <RideHeading>{kind}</RideHeading>
         <RideEntry>
-          <div>{date}</div>
-          {isToggled && <div>{time}</div>}
-          <div>{from}</div>
-          {isToggled && <div>{to}</div>}
-          {isToggled && <div>more ride details</div>}
+          <p>{date}</p>
+          {isToggled && <p>{time}</p>}
+          <p>{from}</p>
+          {isToggled && <p>{to}</p>}
+          {isToggled && <p>more ride details</p>}
         </RideEntry>
     </StyledListItem>
   )
@@ -31,7 +31,7 @@ export default function ListItem({kind, date, time, from, to}) {
   }
 }
 
-const StyledListItem = styled.div`
+const StyledListItem = styled.section`
   margin: ${({kind}) => kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
   padding: 20px;
   width: 60vw;
