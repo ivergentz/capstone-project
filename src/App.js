@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import DashboardPage from './dashboardPage/DashboardPage'
 
 export default function App() {

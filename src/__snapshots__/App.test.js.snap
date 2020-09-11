@@ -2,200 +2,200 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-AxhUy cYPgHd"
+  className="App__Pagebody-sc-3vbase-1 ljNUdT"
 >
   <div
-    className="sc-AxhCb kYmxMP"
+    className="App__PageLayout-sc-3vbase-0 bFEjBD"
   >
-    <div
-      className="sc-AxjAm kHribK"
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm bYZKNw"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm kHribK"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm kHribK"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Warum
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm bYZKNw"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm bYZKNw"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Warum
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm bYZKNw"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm kHribK"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
-    <div
-      className="sc-AxjAm bYZKNw"
+    </section>
+    <section
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <div>
+        <p>
           25.08.2020
-        </div>
-        <div>
+        </p>
+        <p>
           Hamburg
-        </div>
+        </p>
       </p>
-    </div>
+    </section>
   </div>
 </div>
 `;
