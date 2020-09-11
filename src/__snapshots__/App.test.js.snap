@@ -2,23 +2,23 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-AxhUy cYPgHd"
+  className="App__Pagebody-sc-3vbase-1 ljNUdT"
 >
   <div
-    className="sc-AxhCb kYmxMP"
+    className="App__PageLayout-sc-3vbase-0 bFEjBD"
   >
     <section
-      className="sc-AxjAm kHribK"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -29,17 +29,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm bYZKNw"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -50,17 +50,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm kHribK"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -71,17 +71,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm kHribK"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -92,17 +92,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm bYZKNw"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -113,17 +113,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm bYZKNw"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -134,17 +134,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm bYZKNw"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -155,17 +155,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm kHribK"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         gebuchte Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
@@ -176,17 +176,17 @@ exports[`renders correctly 1`] = `
       </p>
     </section>
     <section
-      className="sc-AxjAm bYZKNw"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
       kind="angebotene Fahrt"
       onClick={[Function]}
     >
       <h3
-        className="sc-AxirZ ipKHmU"
+        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
       >
         angebotene Fahrt
       </h3>
       <p
-        className="sc-AxiKw jmdjKA"
+        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
         <p>
           25.08.2020
