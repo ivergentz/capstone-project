@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
@@ -12,6 +13,7 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
+    "cypress": "cypress open",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -20,7 +22,7 @@
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": ["react-app", "pliugin:cypress/recommended"]
   },
   "browserslist": {
     "production": [
@@ -43,6 +45,8 @@
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
+    "cypress": "^5.1.0",
+    "prettier": "2.1.1",
     "react-is": "^16.13.1"
   }
 }

@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
 ListItem.propTypes = {
+  id: PropTypes.string.isRequired,
   kind: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
@@ -15,12 +16,12 @@ export default function ListItem({kind, date, time, from, to}) {
   return (
     <StyledListItem onClick={toggleRideDetails} kind={kind}>
       <RideHeading>{kind}</RideHeading>
-        <RideEntry kind={kind}>
-          <div>{date}</div>
-          {isToggled && <div>{time}</div>}
-          <div>{from}</div>
-          {isToggled && <div>{to}</div>}
-          {isToggled && <div>more ride details</div>}
+        <RideEntry>
+          <p>{date}</p>
+          {isToggled && <p>{time}</p>}
+          <p>{from}</p>
+          {isToggled && <p>{to}</p>}
+          {isToggled && <p>more ride details</p>}
         </RideEntry>
     </StyledListItem>
   )
@@ -30,9 +31,7 @@ export default function ListItem({kind, date, time, from, to}) {
   }
 }
 
-// flexbox, dann items anordnen (justify/align self)
-
-const StyledListItem = styled.div`
+const StyledListItem = styled.section`
   margin: ${({kind}) => kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
   padding: 20px;
   width: 60vw;
