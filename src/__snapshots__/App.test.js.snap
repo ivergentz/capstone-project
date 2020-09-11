@@ -2,23 +2,6 @@
 
 exports[`renders correctly 1`] = `
 <div
-<<<<<<< HEAD
-  className="sc-Axmtr eLbKsq"
->
-  <div
-    className="sc-AxheI ccvBlW"
-  >
-    <img
-      alt="search icon"
-      className="sc-AxhCb fTgGhQ"
-      height="30"
-      onClick={[Function]}
-      src="search.svg"
-      width="30"
-    />
-    <div
-      className="sc-AxjAm kHribK"
-=======
   className="App__Pagebody-sc-3vbase-1 ljNUdT"
 >
   <div
@@ -26,7 +9,6 @@ exports[`renders correctly 1`] = `
   >
     <section
       className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
->>>>>>> master
       kind="gebuchte Fahrt"
       onClick={[Function]}
     >
@@ -216,7 +198,7 @@ exports[`renders correctly 1`] = `
     </section>
   </div>
   <nav
-    className="sc-AxgMl jyclxm"
+    className="sc-AxjAm eZIPAq"
   >
     <img
       alt="search icon"
