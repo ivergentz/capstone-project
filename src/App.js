@@ -1,21 +1,41 @@
 import React from 'react';
 import styled from 'styled-components/macro'
-import DashboardPage from './dashboardPage/DashboardPage'
-import Navbar from './navigation/Navigation';
+import Navbar from './navigation/Navigation'
+import {
+  BrowserRouter as Router,
+Route, 
+Switch,
+} from "react-router-dom"
+import CreatePage from './create/CreatePage'
+import SearchPage from './search/SearchPage'
+import DashboardPage from './dashboardPage/DashboardPage';
 
-export default function App() {
+  export default function App() {
   return ( 
+    
   <Pagebody>
-    <PageLayout>
-      <DashboardPage />
-    </PageLayout>
-    <Navbar />
+    <Router>
+      <PageLayout>
+        <Switch>
+          <Route path="/search">
+            <SearchPage />
+          </Route>
+          <Route path="/create">
+            <CreatePage />
+          </Route>
+          <Route path="/">
+            <DashboardPage />
+          </Route>
+        </Switch>
+      </PageLayout>
+    <Navbar /> 
+    </Router> 
   </Pagebody>
+  
   )
 }
 
 const PageLayout = styled.div`
-  position: relative;
   background: linear-gradient(180deg, var(--back-light), var(--back-dark));
   height: 88vh; 
   border-radius: 0 0 40px 40px;

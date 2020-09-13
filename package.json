@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-test-renderer": "^16.13.1",
     "styled-components": "^5.1.1"
@@ -22,7 +23,10 @@
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
-    "extends": ["react-app", "pliugin:cypress/recommended"]
+    "extends": [
+      "react-app",
+      "pliugin:cypress/recommended"
+    ]
   },
   "browserslist": {
     "production": [
