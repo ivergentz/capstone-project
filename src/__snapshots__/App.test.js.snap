@@ -198,9 +198,10 @@ exports[`renders correctly 1`] = `
     </section>
   </div>
   <nav
-    className="sc-AxjAm eIUMFe"
+    className="sc-AxjAm eKjsPl"
   >
     <a
+      aria-current={null}
       href="/search"
       onClick={[Function]}
     >
@@ -209,15 +210,22 @@ exports[`renders correctly 1`] = `
       </svg>
     </a>
     <a
-      exact={true}
+      aria-current="page"
+      className="active"
       href="/"
       onClick={[Function]}
+      style={
+        Object {
+          "fill": "#3DA95B",
+        }
+      }
     >
       <svg>
         train.svg
       </svg>
     </a>
     <a
+      aria-current={null}
       href="/create"
       onClick={[Function]}
     >
