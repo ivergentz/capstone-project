@@ -1,15 +1,12 @@
 import React from 'react'
 import ListItem from './RidesListItem'
 
-export default function RidesList({rides}) {
+export default function RidesList({ rides }) {
   return (
     <>
-    {rides.map((rides) => (
-      <ListItem 
-        key={rides.id}
-        {...rides}
-      />
-    ))}
+      {rides.map((rides) => (
+        <ListItem key={rides.id} {...rides} />
+      ))}
     </>
   )
 }

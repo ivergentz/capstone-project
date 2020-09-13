@@ -1,20 +1,17 @@
 import React from 'react'
-import  ListItem from '../dashboardPage/RidesListItem'
+import ListItem from '../dashboardPage/RidesListItem'
 import rides from '../data/rides.json'
-
 
 export default {
   title: 'Single Ride',
   component: ListItem,
 }
 
-const Template = (args) => 
-    
-    <ListItem {...args} />
-   
- const [rideProps] = rides
+const Template = (args) => <ListItem {...args} />
+
+const [rideProps] = rides
 
 export const Ride = Template.bind({})
 Ride.args = {
-  ...rideProps
+  ...rideProps,
 }

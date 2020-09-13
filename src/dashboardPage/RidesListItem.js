@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
@@ -11,18 +11,18 @@ ListItem.propTypes = {
   to: PropTypes.string.isRequired,
 }
 
-export default function ListItem({kind, date, time, from, to}) {
+export default function ListItem({ kind, date, time, from, to }) {
   const [isToggled, setIsToggled] = useState(false)
   return (
     <StyledListItem onClick={toggleRideDetails} kind={kind}>
       <RideHeading>{kind}</RideHeading>
-        <RideEntry>
-          <p>{date}</p>
-          {isToggled && <p>{time}</p>}
-          <p>{from}</p>
-          {isToggled && <p>{to}</p>}
-          {isToggled && <p>more ride details</p>}
-        </RideEntry>
+      <RideEntry>
+        <p>{date}</p>
+        {isToggled && <p>{time}</p>}
+        <p>{from}</p>
+        {isToggled && <p>{to}</p>}
+        {isToggled && <p>more ride details</p>}
+      </RideEntry>
     </StyledListItem>
   )
 
@@ -32,24 +32,28 @@ export default function ListItem({kind, date, time, from, to}) {
 }
 
 const StyledListItem = styled.section`
-  margin: ${({kind}) => kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
+  margin: ${({ kind }) =>
+    kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
   padding: 20px;
   width: 60vw;
   height: auto;
   font-size: 0.6em;
-  box-shadow: 0 2px 2px 2px rgba(37, 37, 37, 0.3);   
+  box-shadow: 0 2px 2px 2px rgba(37, 37, 37, 0.3);
   border: none;
-  border-radius: ${({kind}) => kind === 'gebuchte Fahrt' ? '0 25px 25px 0' : '25px 0 0 25px'};
+  border-radius: ${({ kind }) =>
+    kind === 'gebuchte Fahrt' ? '0 25px 25px 0' : '25px 0 0 25px'};
   background: var(--back-light);
-  
+
   &:first-child {
     margin-top: 30px;
-    border-radius: ${({kind}) => kind === 'gebuchte Fahrt' ? '25px 25px 25px 0' : '25px 25px 0 25px'};
+    border-radius: ${({ kind }) =>
+      kind === 'gebuchte Fahrt' ? '25px 25px 25px 0' : '25px 25px 0 25px'};
   }
-  
+
   &:last-child {
     margin-bottom: 30px;
-    border-radius: ${({kind}) => kind === 'gebuchte Fahrt' ? '0 25px 25px' : '25px 25px 0 25px'};
+    border-radius: ${({ kind }) =>
+      kind === 'gebuchte Fahrt' ? '0 25px 25px' : '25px 25px 0 25px'};
   }
 `
 
@@ -59,8 +63,8 @@ const RideHeading = styled.h3`
   font-size: 1.2em;
   color: var(--button-nav);
   margin-bottom: 10px;
-  `
-  
+`
+
 const RideEntry = styled.p`
   font-weight: 300;
   color: var(--button-nav);

@@ -1,14 +1,14 @@
 import React from 'react'
-import Navbar from '../navigation/Navigation'
-
+import NavBar from '../navigation/Navigation'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 export default {
-  title: 'Navigation',
-  component: Navbar,
+  title: 'Buttons',
+  component: NavBar,
 }
 
-const Template = (args) => 
-    
-    <NavBar {...args} />
-   
-export const Navbar = Template.bind({})
+export const NavigationBar = () => (
+  <Router>
+    <NavBar />
+  </Router>
+)
