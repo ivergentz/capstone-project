@@ -49,4 +49,3 @@ const Pagebody = styled.div`
   height: 100vh;
  
 `
-//grid zum vereinfachen des Layouts
