@@ -17,11 +17,11 @@ body {
 }
 
 :root {
-    --back-dark: #0E0F10;
+    --back-dark: #407531;
     --back-middle: ;
-    --back-light: #2A2D32;
+    --back-light: #658349;
    
-    --button-green: #3DA95B;
-    --button-nav: #E5E2E2;
+    --button-green: #73A536;
+    --button-nav: #FEFEFE;
 }
 `

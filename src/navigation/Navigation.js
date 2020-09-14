@@ -8,13 +8,13 @@ import { NavLink } from 'react-router-dom'
 export default function Navbar() {
   return (
     <NavBar>
-      <NavLink activeStyle={{ fill: '#3DA95B' }} to="/search">
+      <NavLink activeStyle={{ fill: 'var(--button-nav)' }} to="/search">
         <SearchSvg />
       </NavLink>
-      <NavLink activeStyle={{ fill: '#3DA95B' }} exact to="/">
+      <NavLink activeStyle={{ fill: 'var(--button-nav)' }} exact to="/">
         <HomeSvg />
       </NavLink>
-      <NavLink activeStyle={{ fill: '#3DA95B' }} to="/create">
+      <NavLink activeStyle={{ fill: 'var(--button-nav)' }} to="/create">
         <AddSvg />
       </NavLink>
     </NavBar>

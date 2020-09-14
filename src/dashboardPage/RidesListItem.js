@@ -38,7 +38,7 @@ const StyledListItem = styled.section`
   width: 60vw;
   height: auto;
   font-size: 0.6em;
-  box-shadow: 0 2px 2px 2px rgba(37, 37, 37, 0.3);
+  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
   border: none;
   border-radius: ${({ kind }) =>
     kind === 'gebuchte Fahrt' ? '0 25px 25px 0' : '25px 0 0 25px'};
