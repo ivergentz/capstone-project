@@ -1,31 +1,84 @@
-import React from 'react'
+import axios from 'axios'
+import React, { Component, useState } from 'react'
 import styled from 'styled-components/macro'
+// import DatePicker from 'react-datepicker'
+// import 'react-datepicker/dist/react-datepicker.css'
+// import { response } from 'express'
 
 export default function Create() {
+  const [rideDate, setRideDate] = useState('')
+  const [rideTime, setRideTime] = useState('')
+  const [rideFrom, setRideFrom] = useState('')
+  const [rideTo, setRideTo] = useState('')
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const ride = {
+      rideDate: rideDate,
+      rideTime: rideTime,
+      rideFrom: rideFrom,
+      rideTo: rideTo,
+      kind: 'angebotene Fahrt',
+    }
+
+    axios
+      .post('http://localhost:5000/rides/', ride)
+      .then((res) => console.log(res.data))
+
+    window.location = '/create'
+  }
+
   return (
     <>
       <Header>Neue Fahrt</Header>
-      <InputSection>
-        <InputTime>
-          <h2>Wann willst du fahren?</h2>
-          <InputRideDetails placeholder="Datum"></InputRideDetails>
-          <InputRideDetails placeholder="Uhrzeit"></InputRideDetails>
-        </InputTime>
-        <InputDirection>
-          <h2>Wohin soll es gehen?</h2>
-          <InputRideDetails placeholder="Abfahrtsbahnhof"></InputRideDetails>
-          <InputRideDetails placeholder="nach"></InputRideDetails>
-        </InputDirection>
-        <InputMoreDetails>
-          <h2>Mache ein Angebot:</h2>
-          <InputRideDetails placeholder="weitere Details zur Fahrt"></InputRideDetails>
-        </InputMoreDetails>
-        <SubmitButton>Submit</SubmitButton>
+      <Container>
+        <form onSubmit={handleSubmit}>
+          <label>Wann willst du fahren?</label>
+          <input
+            required
+            placeholder="Datum"
+            value={rideDate}
+            onChange={(date) => setRideDate(date.target.value)}
+          />
+          <input
+            placeholder="Uhrzeit"
+            type="text"
+            required
+            value={rideTime}
+            onChange={(time) => setRideTime(time.target.value)}
+          />
+          <div>
+            <input
+              placeholder="Ab"
+              type="text"
+              required
+              value={rideFrom}
+              onChange={(from) => setRideFrom(from.target.value)}
+            />
+            <input
+              placeholder="Nach"
+              type="text"
+              required
+              value={rideTo}
+              onChange={(to) => setRideTo(to.target.value)}
+            />
+          </div>
+          {/* <div>
+            <label>Mache ein Angebot:</label>
+            <input placeholder="weitere Details zur Fahrt"></input>
+          </div> */}
+          <SubmitButton type="submit" value="Submit"></SubmitButton>
+        </form>
         <CancelButton>back</CancelButton>
-      </InputSection>
+      </Container>
     </>
   )
 }
+
+const Container = styled.section`
+  margin-top: 20%;
+`
 
 const Header = styled.h1`
   display: flex;
@@ -40,59 +93,59 @@ const Header = styled.h1`
   position: fixed;
   width: 100%;
 `
-const InputSection = styled.section`
-  margin-top: 25%;
+// const InputSection = styled.form`
+//   margin-top: 25%;
 
-  input {
-    background: none;
-    border: 0.2px solid var(--back-dark);
-  }
+//   input {
+//     background: none;
+//     border: 0.2px solid var(--back-dark);
+//   }
 
-  h2 {
-    color: var(--button-nav);
-    width: 85%;
-    padding-top: 0.7em;
-    font-size: 0.7em;
-    margin-left: 20px;
-  }
-`
+//   label {
+//     color: var(--button-nav);
+//     width: 85%;
+//     padding-top: 0.7em;
+//     font-size: 0.7em;
+//     margin-left: 20px;
+//   }
+// `
 
-const InputRideDetails = styled.input`
-  height: 1.5em;
-  color: black;
-  padding-top: 20px;
-  display: grid;
-  font-size: 0.8em;
-  margin: 20px;
-  margin-bottom: 20px;
-  width: 85%;
-`
+// const InputRideDetails = styled.input`
+//   height: 1.5em;
+//   color: black;
+//   padding-top: 20px;
+//   display: grid;
+//   font-size: 0.8em;
+//   margin: 20px;
+//   margin-bottom: 20px;
+//   width: 85%;
+// `
 
-const InputTime = styled.form`
-  background: var(--back-light);
-  margin-bottom: 20px;
-  width: 85%;
-  border-radius: 0 25px 25px 0;
-  padding-bottom: 10px;
-`
-const InputDirection = styled.form`
-  background: var(--back-light);
-  padding-bottom: 10px;
-  border-radius: 25px 0 0 25px;
-  width: 85%;
-  margin: 0px 0 0 15vw;
-  margin-bottom: 20px;
-`
+// const InputTime = styled.div`
+//   background: var(--back-light);
+//   margin-bottom: 20px;
+//   width: 85%;
+//   border-radius: 0 25px 25px 0;
+//   padding-bottom: 10px;
+// `
+// const InputDirection = styled.form`
+//   background: var(--back-light);
+//   padding-bottom: 10px;
+//   border-radius: 25px 0 0 25px;
+//   width: 85%;
+//   margin: 0px 0 0 15vw;
+//   margin-bottom: 20px;
+// `
 
-const InputMoreDetails = styled.form`
-  background: var(--back-light);
-  margin-bottom: 20px;
-  width: 85%;
-  border-radius: 0 25px 25px 0;
-  padding-bottom: 10px;
-`
+// const InputMoreDetails = styled.form`
+//   background: var(--back-light);
+//   margin-bottom: 20px;
+//   width: 85%;
+//   border-radius: 0 25px 25px 0;
+//   padding-bottom: 10px;
+// `
 
-const SubmitButton = styled.button`
+const SubmitButton = styled.input`
   border: none;
   border-radius: 25px;
 `

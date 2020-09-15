@@ -12,15 +12,9 @@ export default function App() {
       <Router>
         <PageLayout>
           <Switch>
-            <Route path="/search">
-              <SearchPage />
-            </Route>
-            <Route path="/create">
-              <CreatePage />
-            </Route>
-            <Route path="/">
-              <DashboardPage />
-            </Route>
+            <Route path="/search" component={SearchPage}></Route>
+            <Route path="/create" component={CreatePage}></Route>
+            <Route path="/" component={DashboardPage}></Route>
           </Switch>
         </PageLayout>
         <Navbar />

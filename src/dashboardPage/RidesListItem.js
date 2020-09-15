@@ -3,24 +3,30 @@ import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
 ListItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired,
   kind: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  from: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
+  rideDate: PropTypes.string.isRequired,
+  rideTime: PropTypes.string.isRequired,
+  rideFrom: PropTypes.string.isRequired,
+  rideTo: PropTypes.string.isRequired,
 }
 
-export default function ListItem({ kind, date, time, from, to }) {
+export default function ListItem({
+  kind,
+  rideDate,
+  rideTime,
+  rideFrom,
+  rideTo,
+}) {
   const [isToggled, setIsToggled] = useState(false)
   return (
     <StyledListItem onClick={toggleRideDetails} kind={kind}>
       <RideHeading>{kind}</RideHeading>
       <RideEntry>
-        <p>{date}</p>
-        {isToggled && <p>{time}</p>}
-        <p>{from}</p>
-        {isToggled && <p>{to}</p>}
+        <p>{rideDate}</p>
+        {isToggled && <p>{rideTime}</p>}
+        <p>{rideFrom}</p>
+        {isToggled && <p>{rideTo}</p>}
         {isToggled && <p>more ride details</p>}
       </RideEntry>
     </StyledListItem>
