@@ -7,7 +7,7 @@ router.route('/').get((req, res) => {
     .catch((err) => res.status(400).json('Erroer: ' + err))
 })
 
-router.route('/add').post((req, res) => {
+router.route('/').post((req, res) => {
   const rideDate = req.body.rideDate
   const rideTime = req.body.rideTime
   const rideFrom = req.body.rideFrom
@@ -24,6 +24,28 @@ router.route('/add').post((req, res) => {
     .save()
     .then(() => res.json('Ride added!'))
     .catch((err) => res.status(400).json('Error: ' + err))
+})
+
+router.route('/:id').delete((req, res) => {
+  Ride.findByIdAndDelete(req.params.id)
+    .then(() => res.json('Ride deleted'))
+    .catch((err) => res.status(400).json('Erroer: ' + err))
+})
+
+router.route('/:id').post((req, res) => {
+  Ride.findById(req.params.id)
+    .then((rides) => {
+      rides.rideDate = req.body.rideDate
+      rides.rideTime = req.body.rideTime
+      rides.rideFrom = req.body.rideFrom
+      rides.rideTo = req.body.rideTo
+
+      rides
+        .save()
+        .then(res.json('Ride updated'))
+        .catch((err) => res.status(400).json('Erroer: ' + err))
+    })
+    .catch((err) => res.status(400).json('Erroer: ' + err))
 })
 
 module.exports = router
