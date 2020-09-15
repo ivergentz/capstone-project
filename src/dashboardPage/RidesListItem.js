@@ -19,6 +19,7 @@ export default function ListItem({
   rideTo,
 }) {
   const [isToggled, setIsToggled] = useState(false)
+
   return (
     <StyledListItem onClick={toggleRideDetails} kind={kind}>
       <RideHeading>{kind}</RideHeading>

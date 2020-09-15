@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 // import DatePicker from 'react-datepicker'
 // import 'react-datepicker/dist/react-datepicker.css'

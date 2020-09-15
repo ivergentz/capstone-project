@@ -5,195 +5,20 @@ exports[`renders correctly 1`] = `
   className="App__Pagebody-sc-3vbase-1 ljNUdT"
 >
   <div
-    className="App__PageLayout-sc-3vbase-0 kPLutj"
+    className="App__PageLayout-sc-3vbase-0 kAmBtc"
   >
     <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
-      kind="gebuchte Fahrt"
+      className="RidesListItem__StyledListItem-sc-1oxwasi-0 eELtrs"
       onClick={[Function]}
     >
       <h3
         className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        gebuchte Fahrt
-      </h3>
+      />
       <p
         className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
       >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
-      kind="angebotene Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        angebotene Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
-      kind="gebuchte Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        gebuchte Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
-      kind="gebuchte Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        gebuchte Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Warum
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
-      kind="angebotene Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        angebotene Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
-      kind="angebotene Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        angebotene Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Warum
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
-      kind="angebotene Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        angebotene Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 hLwyPt"
-      kind="gebuchte Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        gebuchte Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
-      </p>
-    </section>
-    <section
-      className="RidesListItem__StyledListItem-sc-1oxwasi-0 jWBXOT"
-      kind="angebotene Fahrt"
-      onClick={[Function]}
-    >
-      <h3
-        className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-      >
-        angebotene Fahrt
-      </h3>
-      <p
-        className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-      >
-        <p>
-          25.08.2020
-        </p>
-        <p>
-          Hamburg
-        </p>
+        <p />
+        <p />
       </p>
     </section>
   </div>
@@ -216,7 +41,7 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "fill": "#3DA95B",
+          "fill": "var(--button-nav)",
         }
       }
     >
