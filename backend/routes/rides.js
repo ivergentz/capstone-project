@@ -4,7 +4,7 @@ let Ride = require('../models/rides.model')
 router.route('/').get((req, res) => {
   Ride.find()
     .then((rides) => res.json(rides))
-    .catch((err) => res.status(400).json('Erroer: ' + err))
+    .catch((err) => res.status(400).json('Error: ' + err))
 })
 
 router.route('/').post((req, res) => {
