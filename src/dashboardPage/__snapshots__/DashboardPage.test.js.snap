@@ -1,18 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<section
-  className="RidesListItem__StyledListItem-sc-1oxwasi-0 eELtrs"
-  onClick={[Function]}
+<h1
+  className="DashboardPage__Header-sc-17821ts-0 dkwwJv"
 >
-  <h3
-    className="RidesListItem__RideHeading-sc-1oxwasi-1 bolJNL"
-  />
-  <p
-    className="RidesListItem__RideEntry-sc-1oxwasi-2 hUXuxY"
-  >
-    <p />
-    <p />
-  </p>
-</section>
+  Deine Fahrten
+</h1>
 `;

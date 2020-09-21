@@ -11,12 +11,15 @@ export default function Navbar() {
       <NavLink activeStyle={{ fill: 'var(--button-nav)' }} to="/search">
         <SearchSvg />
       </NavLink>
+      {/* <p>Fahrt suchen</p> */}
       <NavLink activeStyle={{ fill: 'var(--button-nav)' }} exact to="/">
         <HomeSvg />
       </NavLink>
+      {/* <p>meine Fahrten</p> */}
       <NavLink activeStyle={{ fill: 'var(--button-nav)' }} to="/create">
         <AddSvg />
       </NavLink>
+      {/* <p>Fahrt anlegen</p> */}
     </NavBar>
   )
 }

@@ -20,8 +20,7 @@ body {
     --back-dark: #407531;
     --back-middle: ;
     --back-light: #658349;
-   
     --button-green: #73A536;
     --button-nav: #FEFEFE;
-}
+    }
 `
