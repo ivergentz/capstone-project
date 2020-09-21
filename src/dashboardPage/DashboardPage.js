@@ -19,7 +19,7 @@ export default function DashboardPage() {
   return (
     <>
       <Header>Deine Fahrten</Header>
-      <Rides rides={rides} />
+      <Empty>Noch keine Fahrt hinzugefügt</Empty>
     </>
   )
 }
@@ -36,4 +36,9 @@ const Header = styled.h1`
   box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
   position: fixed;
   width: 100%;
+`
+
+const Empty = styled.p`
+  color: white;
+  margin-top: 100px;
 `

@@ -8,10 +8,13 @@ exports[`renders correctly 1`] = `
     className="App__PageLayout-sc-3vbase-0 kAmBtc"
   >
     <h1
-      className="DashboardPage__Header-sc-17821ts-0 dkwwJv"
+      className="DashboardPage__Header-sc-17821ts-0 IdgAV"
     >
       Deine Fahrten
     </h1>
+    <p>
+      Noch keine Fahrt hinzugefügt
+    </p>
   </div>
   <nav
     className="sc-AxjAm eKjsPl"
