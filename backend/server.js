@@ -22,7 +22,6 @@ const connection = mongoose.connection
 connection.once('open', () => {
   console.log('MnogoDB database connetcion established successfully')
 })
-
 const ridesRouter = require('./routes/rides')
 
 app.use('/rides', ridesRouter)
