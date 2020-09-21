@@ -42,7 +42,6 @@ export default function Create() {
               format="DD/MM/YYYY"
               required
               value={rideDate}
-              a
               onChange={(date) => setRideDate(date.target.value)}
             ></InputDetails>
             <InputDetails
@@ -59,7 +58,7 @@ export default function Create() {
               placeholder="Ab"
               type="text"
               required
-              value={rideFrom}
+              value={rideFrom || ''}
               onChange={(from) => setRideFrom(from.target.value)}
             />
             <InputDetails
