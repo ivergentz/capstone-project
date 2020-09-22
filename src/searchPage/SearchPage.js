@@ -21,6 +21,7 @@ export default function Search() {
 
   return (
     <>
+      <Header>Fahrt suchen</Header>
       <Image
         src={search}
         onClick={toggleSearchBar}
@@ -48,4 +49,17 @@ const Input = styled.input`
   margin: auto;
   width: 80vw;
   font-size: 0.7em;
+`
+const Header = styled.h1`
+  display: flex;
+  color: var(--button-nav);
+  font-weight: 100;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--back-light);
+  border-radius: 0 0 25px 25px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  position: fixed;
+  width: 100%;
 `
