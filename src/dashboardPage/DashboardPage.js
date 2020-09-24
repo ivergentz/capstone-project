@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 import styled from 'styled-components/macro'
 
 export default function DashboardPage() {

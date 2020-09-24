@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
+import { useForm } from 'react-hook-form'
+import SetTime from './SetTime'
 
 export default function Create() {
   const [rideDate, setRideDate] = useState('')
@@ -9,9 +11,11 @@ export default function Create() {
   const [rideTo, setRideTo] = useState('')
   const [kind, setKind] = useState('')
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
+  const { register, handleSubmit, errors } = useForm()
 
+  const todaysDate = new Date()
+
+  const onSubmit = () => {
     const ride = {
       rideDate: rideDate,
       rideTime: rideTime,
@@ -30,52 +34,82 @@ export default function Create() {
   return (
     <>
       <Header>Fahrt anlegen</Header>
+
       <Container>
         <form
-          onSubmit={handleSubmit}
+          name="createForm"
+          onSubmit={handleSubmit(onSubmit)}
           onChange={() => setKind('angebotene Fahrt')}
         >
           <LabelStyling>
             Wann willst du fahren?
             <InputDetails
-              placeholder="DD/MM/YYYY"
-              format="DD/MM/YYYY"
-              required
+              id="datePicker"
+              type="date"
+              name="rideDate"
+              placeholder="dd-mm-yyyy"
+              ref={register({ required: true })}
               value={rideDate}
               onChange={(date) => setRideDate(date.target.value)}
-            ></InputDetails>
-            <InputDetails
-              placeholder="Uhrzeit"
-              type="text"
-              required
-              value={rideTime}
-              onChange={(time) => setRideTime(time.target.value)}
             />
+            {errors.rideDate && errors.rideDate.type === 'required' && (
+              <ErrorMsg>
+                Bitte trage ein gültiges Datum ein (TT.MM.JJJJ)
+              </ErrorMsg>
+            )}
+            <SetTime
+              name="rideTime"
+              ref={register({ required: true })}
+              type="time"
+              value={rideTime}
+            />
+            {errors.rideTime && errors.rideTime.type === 'required' && (
+              <ErrorMsg>Bitte trage eine gültige Zeit ein (SS:MM)</ErrorMsg>
+            )}
           </LabelStyling>
           <LabelStyling>
             Wohin willst du fahren?
             <InputDetails
+              name="rideFrom"
+              ref={register({ required: true, minLength: 4 })}
               placeholder="Ab"
-              type="text"
-              required
               value={rideFrom || ''}
               onChange={(from) => setRideFrom(from.target.value)}
             />
+            {errors.rideFrom && errors.rideFrom.type === 'required' && (
+              <ErrorMsg>Bitte trage ein gültigen Abfahrtsort an</ErrorMsg>
+            )}
+            {errors.rideFrom && errors.rideFrom.type === 'minLength' && (
+              <ErrorMsg>Bitte trage ein gültigen Abfahrtsort an</ErrorMsg>
+            )}
             <InputDetails
+              name="rideTo"
+              ref={register({ required: true, minLength: 3 })}
               placeholder="Nach"
               type="text"
-              required
               value={rideTo}
               onChange={(to) => setRideTo(to.target.value)}
             />
+            {errors.rideTo && errors.rideTo.type === 'required' && (
+              <ErrorMsg>Bitte trage einen gültigen Ankunftsort an</ErrorMsg>
+            )}
+            {errors.rideTo && errors.rideTo.type === 'minLength' && (
+              <ErrorMsg>Bitte trage ein gültigen Ankunftsort an</ErrorMsg>
+            )}
           </LabelStyling>
           <SubmitButton type="submit" value="Fahrt anlegen"></SubmitButton>
         </form>
-        <CancelButton type="submit" value="Eingaben löschen"></CancelButton>
+        <CancelButton type="reset" value="Eingaben löschen"></CancelButton>
       </Container>
     </>
   )
 }
+
+const ErrorMsg = styled.h4`
+  display: grid;
+  font-size: 0.5em;
+  color: red;
+`
 
 const Container = styled.section`
   display: grid;
@@ -96,6 +130,8 @@ const LabelStyling = styled.label`
 
 const InputDetails = styled.input`
   height: 4em;
+  width: 50vw;
+  color: white;
   display: flex;
   font-size: 0.6em;
   border: none;
@@ -104,6 +140,7 @@ const InputDetails = styled.input`
   text-align: center;
   background: var(--back-dark);
   box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  justify-content: center;
 `
 
 const Header = styled.h1`
@@ -118,6 +155,7 @@ const Header = styled.h1`
   box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
   position: fixed;
   width: 100%;
+  z-index: 100;
 `
 
 const SubmitButton = styled.input`
