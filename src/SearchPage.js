@@ -21,7 +21,7 @@ export default function Search() {
 
   return (
     <>
-      <Header>Fahrt suchen</Header>
+      <Header>Fahrt durchsuchen</Header>
       <Image
         src={search}
         onClick={toggleSearchBar}
