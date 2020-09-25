@@ -22,11 +22,10 @@ export default function ListItem({
 
   return (
     <StyledListItem onClick={toggleRideDetails} kind={kind}>
-      <RideHeading>{kind}</RideHeading>
       <RideEntry>
+        <p>{rideFrom}</p>
         <p>{rideDate}</p>
         {isToggled && <p>{rideTime}</p>}
-        <p>{rideFrom}</p>
         {isToggled && <p>{rideTo}</p>}
         {isToggled && <p>more ride details</p>}
       </RideEntry>
@@ -39,37 +38,16 @@ export default function ListItem({
 }
 
 const StyledListItem = styled.section`
-  margin: ${({ kind }) =>
-    kind === 'gebuchte Fahrt' ? '10px 0 0 0' : '10px 0 0 40vw'};
+  display: grid;
+  margin: 10px;
+  justify-content: left;
   padding: 20px;
-  width: 60vw;
   height: auto;
   font-size: 0.6em;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
   border: none;
-  border-radius: ${({ kind }) =>
-    kind === 'gebuchte Fahrt' ? '0 25px 25px 0' : '25px 0 0 25px'};
+  border-radius: 25px;
   background: var(--back-light);
-
-  &:first-child {
-    margin-top: 30px;
-    border-radius: ${({ kind }) =>
-      kind === 'gebuchte Fahrt' ? '25px 25px 25px 0' : '25px 25px 0 25px'};
-  }
-
-  &:last-child {
-    margin-bottom: 30px;
-    border-radius: ${({ kind }) =>
-      kind === 'gebuchte Fahrt' ? '0 25px 25px' : '25px 25px 0 25px'};
-  }
-`
-
-const RideHeading = styled.h3`
-  display: flex;
-  align-content: center;
-  font-size: 1.2em;
-  color: var(--button-nav);
-  margin-bottom: 10px;
 `
 
 const RideEntry = styled.p`

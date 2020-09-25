@@ -19,7 +19,7 @@ const Header = styled.h1`
   padding: 20px;
   background: var(--back-light);
   border-radius: 0 0 25px 25px;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
   position: fixed;
   width: 100%;
 `

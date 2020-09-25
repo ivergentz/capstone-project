@@ -48,7 +48,7 @@ export default function Create() {
             ></InputDetails>
             {errors.rideDate}
             <InputDetails
-              placeholder="Uhrzeit"
+              placeholder="HH:MM"
               type="text"
               required
               value={rideTime}
@@ -87,6 +87,7 @@ const Container = styled.section`
 `
 
 const LabelStyling = styled.label`
+  color: var(--button-nav);
   font-size: 0.8em;
   display: grid;
   text-align: center;
@@ -94,10 +95,11 @@ const LabelStyling = styled.label`
   padding: 0.8em;
   background: var(--back-light);
   border-radius: 25px;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
 
 const InputDetails = styled.input`
+  color: var(--button-nav);
   height: 4em;
   display: flex;
   font-size: 0.6em;
@@ -106,7 +108,7 @@ const InputDetails = styled.input`
   margin: 10px auto;
   text-align: center;
   background: var(--back-dark);
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
 
 const Header = styled.h1`
@@ -118,7 +120,7 @@ const Header = styled.h1`
   padding: 20px;
   background: var(--back-light);
   border-radius: 0 0 25px 25px;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
   position: fixed;
   width: 100%;
 `
@@ -129,11 +131,11 @@ const SubmitButton = styled.input`
   font-size: 0.8em;
   height: 1.5em;
   width: 80vw;
-  background: var(--button-nav);
-  color: var(--back-dark);
+  background: var(--button-green);
+  color: var(--button-nav);
   border: none;
   border-radius: 25px;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
 const CancelButton = styled.input`
   display: flex;
@@ -146,5 +148,5 @@ const CancelButton = styled.input`
   color: white;
   border: none;
   border-radius: 25px;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `

@@ -5,10 +5,10 @@ exports[`renders correctly 1`] = `
   className="App__Pagebody-sc-3vbase-1 ljNUdT"
 >
   <div
-    className="App__PageLayout-sc-3vbase-0 kAmBtc"
+    className="App__PageLayout-sc-3vbase-0 gnqwIG"
   >
     <h1
-      className="DashboardPage__Header-sc-1h5uo43-0 crZCrg"
+      className="DashboardPage__Header-sc-1h5uo43-0 eqnTWm"
     >
       Deine Fahrten
     </h1>

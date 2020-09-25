@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 Array [
   <h1
-    className="DashboardPage__Header-sc-1h5uo43-0 crZCrg"
+    className="DashboardPage__Header-sc-1h5uo43-0 eqnTWm"
   >
     Deine Fahrten
   </h1>,
