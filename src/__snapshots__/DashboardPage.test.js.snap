@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<h1
-  className="DashboardPage__Header-sc-17821ts-0 dkwwJv"
->
-  Deine Fahrten
-</h1>
+Array [
+  <h1
+    className="DashboardPage__Header-sc-1h5uo43-0 crZCrg"
+  >
+    Deine Fahrten
+  </h1>,
+  <p
+    className="DashboardPage__NoRide-sc-1h5uo43-1 jrbDNi"
+  >
+    Noch keine Fahrt hinzugefügt
+  </p>,
+]
 `;

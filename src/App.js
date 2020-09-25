@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import Navbar from './navigation/Navigation'
+import Navbar from './Navigation'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import CreatePage from './createPage/CreatePage'
-import SearchPage from './searchPage/SearchPage'
-import DashboardPage from './dashboardPage/DashboardPage'
+import CreatePage from './CreatePage'
+import SearchPage from './SearchPage'
+import DashboardPage from './DashboardPage'
 
 export default function App() {
   return (

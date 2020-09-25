@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App__Pagebody-sc-3vbase-1 ljNUdT"
+>
+  <div
+    className="App__PageLayout-sc-3vbase-0 kAmBtc"
+  >
+    <h1
+      className="DashboardPage__Header-sc-1h5uo43-0 crZCrg"
+    >
+      Deine Fahrten
+    </h1>
+    <p
+      className="DashboardPage__NoRide-sc-1h5uo43-1 jrbDNi"
+    >
+      Noch keine Fahrt hinzugefügt
+    </p>
+  </div>
+  <nav
+    className="sc-AxjAm eKjsPl"
+  >
+    <a
+      aria-current={null}
+      href="/search"
+      onClick={[Function]}
+    >
+      <svg>
+        search.svg
+      </svg>
+    </a>
+    <a
+      aria-current="page"
+      className="active"
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "fill": "var(--button-nav)",
+        }
+      }
+    >
+      <svg>
+        train.svg
+      </svg>
+    </a>
+    <a
+      aria-current={null}
+      href="/create"
+      onClick={[Function]}
+    >
+      <svg>
+        plus.svg
+      </svg>
+    </a>
+  </nav>
+</div>
+`;

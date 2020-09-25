@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
 export default function Create() {
@@ -10,11 +10,6 @@ export default function Create() {
   const [kind, setKind] = useState('')
 
   const [errors, setErrors] = useState({})
-
-  useEffect(() => {
-    if (rideDate > new Date()) {
-    }
-  }, [rideDate])
 
   const handleSubmit = (event) => {
     event.preventDefault()

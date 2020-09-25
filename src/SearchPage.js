@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import search from '../assets/search.svg'
-import Rides from '../dashboardPage/RidesList'
+import search from './image/search.svg'
+import Rides from './RidesList'
 
 export default function Search() {
   const [isToggled, setIsToggled] = useState(false)

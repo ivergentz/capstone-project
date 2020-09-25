@@ -1,20 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 import styled from 'styled-components/macro'
 
 export default function DashboardPage() {
-  // const [rides, setRides] = useState([])
-  // useEffect(() => {
-  //   axios
-  //     .get('http://localhost:5000/rides')
-  //     .then((response) => {
-  //       setRides(response.data)
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error.response.data)
-  //     })
-  // }, [])
-
   return (
     <>
       <Header>Deine Fahrten</Header>
