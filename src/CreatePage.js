@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 
 export default function Create() {
@@ -8,6 +8,13 @@ export default function Create() {
   const [rideFrom, setRideFrom] = useState('')
   const [rideTo, setRideTo] = useState('')
   const [kind, setKind] = useState('')
+
+  const [errors, setErrors] = useState({})
+
+  useEffect(() => {
+    if (rideDate > new Date()) {
+    }
+  }, [rideDate])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -44,6 +51,7 @@ export default function Create() {
               value={rideDate}
               onChange={(date) => setRideDate(date.target.value)}
             ></InputDetails>
+            {errors.rideDate}
             <InputDetails
               placeholder="Uhrzeit"
               type="text"
