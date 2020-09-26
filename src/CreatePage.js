@@ -9,8 +9,6 @@ export default function Create() {
   const [rideTo, setRideTo] = useState('')
   const [kind, setKind] = useState('')
 
-  const [errors, setErrors] = useState({})
-
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -46,7 +44,6 @@ export default function Create() {
               value={rideDate}
               onChange={(date) => setRideDate(date.target.value)}
             ></InputDetails>
-            {errors.rideDate}
             <InputDetails
               placeholder="HH:MM"
               type="text"

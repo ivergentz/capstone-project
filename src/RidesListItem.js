@@ -17,20 +17,31 @@ export default function ListItem({
   rideTime,
   rideFrom,
   rideTo,
+  _id,
 }) {
   const [isToggled, setIsToggled] = useState(false)
+  const [isBookmarked, setIsBookmarked] = useState(false)
 
   return (
-    <StyledListItem onClick={toggleRideDetails} kind={kind}>
-      <RideEntry>
-        <p>{rideFrom}</p>
-        <p>{rideDate}</p>
-        {isToggled && <p>{rideTime}</p>}
-        {isToggled && <p>{rideTo}</p>}
-        {isToggled && <p>more ride details</p>}
-      </RideEntry>
-    </StyledListItem>
+    <>
+      <StyledListItem onClick={toggleRideDetails} kind={kind}>
+        <BookmarkSymbol onClick={handleBookmarkClick}></BookmarkSymbol>
+        {console.log(isBookmarked)}
+        <RideEntry>
+          <p>{rideFrom}</p>
+          <p>{rideDate}</p>
+          {isToggled && <p>{rideTime}</p>}
+          {isToggled && <p>{rideTo}</p>}
+          {isToggled && <p>more ride details</p>}
+        </RideEntry>
+      </StyledListItem>
+    </>
   )
+
+  function handleBookmarkClick(event) {
+    event.stopPropagation()
+    setIsBookmarked(!isBookmarked)
+  }
 
   function toggleRideDetails() {
     setIsToggled(!isToggled)
@@ -38,8 +49,9 @@ export default function ListItem({
 }
 
 const StyledListItem = styled.section`
-  display: grid;
-  margin: 10px;
+  position: relative;
+  display: flex;
+  margin: 25px;
   justify-content: left;
   padding: 20px;
   height: auto;
@@ -48,6 +60,27 @@ const StyledListItem = styled.section`
   border: none;
   border-radius: 25px;
   background: var(--back-light);
+
+  & :nth-child(2) {
+    margin-top: 16vh;
+  }
+`
+
+const BookmarkSymbol = styled.button`
+  background: yellow;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  z-index: 100;
+  height: 30px;
+  width: 40px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
+
+  .active {
+    background: green;
+  }
 `
 
 const RideEntry = styled.p`

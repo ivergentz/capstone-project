@@ -1,14 +1,25 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { ReactComponent as LogoSvg } from './image/riide.svg'
 
-export default function DashboardPage() {
+export default function DashboardPage(isBookmarked) {
   return (
     <>
       <Header>Deine Fahrten</Header>
+      <LogoStyling>
+        <LogoSvg />
+      </LogoStyling>
       <NoRide>Noch keine Fahrt hinzugefügt</NoRide>
     </>
   )
 }
+
+const LogoStyling = styled.div`
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40%;
+  width: 80vw;
+`
 
 const Header = styled.h1`
   display: flex;
