@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as LogoSvg } from './image/riide.svg'
+// import Rides from './RidesList'
+// import Bookmarks from './Bookmark'
 
 export default function DashboardPage(isBookmarked) {
+  localStorage.getItem('isBookmarked', isBookmarked)
   return (
     <>
       <Header>Deine Fahrten</Header>
@@ -10,6 +13,8 @@ export default function DashboardPage(isBookmarked) {
         <LogoSvg />
       </LogoStyling>
       <NoRide>Noch keine Fahrt hinzugefügt</NoRide>
+      {/* <Rides isBookmarked={isBookmarked} />
+      {console.log(isBookmarked)} */}
     </>
   )
 }

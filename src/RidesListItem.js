@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
@@ -12,21 +12,32 @@ ListItem.propTypes = {
 }
 
 export default function ListItem({
-  kind,
   rideDate,
   rideTime,
   rideFrom,
   rideTo,
   _id,
 }) {
+  const initialBookmark = () => localStorage.getItem(_id) || false
   const [isToggled, setIsToggled] = useState(false)
-  const [isBookmarked, setIsBookmarked] = useState(false)
+  const [isBookmarked, setIsBookmarked] = useState(initialBookmark)
 
+  useEffect(() => {
+    const storeBookmark = () => {
+      localStorage.setItem(_id, isBookmarked)
+    }
+    storeBookmark()
+  }, [handleBookmarkClick])
   return (
     <>
-      <StyledListItem onClick={toggleRideDetails} kind={kind}>
-        <BookmarkSymbol onClick={handleBookmarkClick}></BookmarkSymbol>
-        {console.log(isBookmarked)}
+      <StyledListItem onClick={toggleRideDetails} key={_id}>
+        <BookmarkSymbol
+          onClick={handleBookmarkClick}
+          className={isBookmarked && 'active'}
+        >
+          {console.log(isBookmarked + '' + _id)}
+          &hearts;
+        </BookmarkSymbol>
         <RideEntry>
           <p>{rideFrom}</p>
           <p>{rideDate}</p>
@@ -37,7 +48,6 @@ export default function ListItem({
       </StyledListItem>
     </>
   )
-
   function handleBookmarkClick(event) {
     event.stopPropagation()
     setIsBookmarked(!isBookmarked)
@@ -67,7 +77,7 @@ const StyledListItem = styled.section`
 `
 
 const BookmarkSymbol = styled.button`
-  background: yellow;
+  background: var(--button-nav);
   position: absolute;
   top: -10px;
   right: 20px;
@@ -78,8 +88,8 @@ const BookmarkSymbol = styled.button`
   border: none;
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 
-  .active {
-    background: green;
+  &.active {
+    background: var(--button-green);
   }
 `
 
