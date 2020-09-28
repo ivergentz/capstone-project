@@ -18,16 +18,15 @@ export default function ListItem({
   rideTo,
   _id,
 }) {
-  const initialBookmark = () => localStorage.getItem(_id) || false
   const [isToggled, setIsToggled] = useState(false)
-  const [isBookmarked, setIsBookmarked] = useState(initialBookmark)
+  const [isBookmarked, setIsBookmarked] = useState(
+    JSON.parse(localStorage.getItem(_id) || false)
+  )
 
   useEffect(() => {
-    const storeBookmark = () => {
-      localStorage.setItem(_id, isBookmarked)
-    }
-    storeBookmark()
-  }, [handleBookmarkClick])
+    localStorage.setItem(_id, isBookmarked)
+  }, [isBookmarked])
+
   return (
     <>
       <StyledListItem onClick={toggleRideDetails} key={_id}>
@@ -35,7 +34,6 @@ export default function ListItem({
           onClick={handleBookmarkClick}
           className={isBookmarked && 'active'}
         >
-          {console.log(isBookmarked + '' + _id)}
           &hearts;
         </BookmarkSymbol>
         <RideEntry>
@@ -43,7 +41,6 @@ export default function ListItem({
           <p>{rideDate}</p>
           {isToggled && <p>{rideTime}</p>}
           {isToggled && <p>{rideTo}</p>}
-          {isToggled && <p>more ride details</p>}
         </RideEntry>
       </StyledListItem>
     </>

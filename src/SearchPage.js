@@ -19,7 +19,7 @@ export default function SearchPage() {
 
   return (
     <>
-      <Header>Fahrt durchsuchen</Header>
+      <Header>Fahrt finden</Header>
 
       <Rides rides={rides} />
     </>

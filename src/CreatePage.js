@@ -71,7 +71,6 @@ export default function Create() {
           </LabelStyling>
           <SubmitButton type="submit" value="Fahrt anlegen"></SubmitButton>
         </form>
-        <CancelButton type="submit" value="Eingaben löschen"></CancelButton>
       </Container>
     </>
   )
