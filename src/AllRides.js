@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Rides from './RidesList'
 
-export default function SearchPage() {
+export default function AllRides() {
   const [rides, setRides] = useState([])
 
   useEffect(() => {

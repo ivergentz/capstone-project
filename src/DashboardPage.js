@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as LogoSvg } from './image/riide.svg'
-import ListItem from './RidesList'
 
-export default function DashboardPage(_id, isBookmarked) {
+export default function DashboardPage(rides, isBookmarked) {
   return (
     <>
       <Header>Deine Fahrten</Header>
@@ -11,7 +10,6 @@ export default function DashboardPage(_id, isBookmarked) {
         <LogoSvg />
       </LogoStyling>
       <NoRide>Noch keine Fahrt hinzugefügt</NoRide>
-      <ListItem />
     </>
   )
 }

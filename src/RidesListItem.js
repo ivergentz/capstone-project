@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
@@ -26,7 +26,6 @@ export default function ListItem({
   useEffect(() => {
     localStorage.setItem(_id, isBookmarked)
   }, [isBookmarked])
-
   return (
     <>
       <StyledListItem onClick={toggleRideDetails} key={_id}>
@@ -45,13 +44,13 @@ export default function ListItem({
       </StyledListItem>
     </>
   )
-  function handleBookmarkClick(event) {
-    event.stopPropagation()
-    setIsBookmarked(!isBookmarked)
-  }
 
   function toggleRideDetails() {
     setIsToggled(!isToggled)
+  }
+  function handleBookmarkClick(event) {
+    event.stopPropagation()
+    setIsBookmarked(!isBookmarked)
   }
 }
 

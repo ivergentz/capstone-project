@@ -133,16 +133,3 @@ const SubmitButton = styled.input`
   border-radius: 25px;
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
-const CancelButton = styled.input`
-  display: flex;
-  margin: 0 auto;
-  margin-top: 5%;
-  font-size: 0.8em;
-  height: 1.5em;
-  width: 80vw;
-  background: rgb(237, 140, 140);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
-`

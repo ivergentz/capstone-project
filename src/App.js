@@ -3,8 +3,8 @@ import styled from 'styled-components/macro'
 import Navbar from './Navigation'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import CreatePage from './CreatePage'
-import SearchPage from './SearchPage'
 import DashboardPage from './DashboardPage'
+import AllRides from './AllRides'
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
       <Router>
         <PageLayout>
           <Switch>
-            <Route path="/search" component={SearchPage}></Route>
+            <Route path="/search" component={AllRides}></Route>
             <Route path="/create" component={CreatePage}></Route>
             <Route path="/" component={DashboardPage}></Route>
           </Switch>
