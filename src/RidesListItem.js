@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
-ListItem.propTypes = {
+SingleRide.propTypes = {
   _id: PropTypes.string.isRequired,
   kind: PropTypes.string.isRequired,
   rideDate: PropTypes.string.isRequired,
@@ -11,7 +11,7 @@ ListItem.propTypes = {
   rideTo: PropTypes.string.isRequired,
 }
 
-export default function ListItem({
+export default function SingleRide({
   rideDate,
   rideTime,
   rideFrom,
@@ -40,6 +40,7 @@ export default function ListItem({
           <p>{rideDate}</p>
           {isToggled && <p>{rideTime}</p>}
           {isToggled && <p>{rideTo}</p>}
+          {isToggled && <a href="mailto:info«riide.com">&#9993;</a>}
         </RideEntry>
       </StyledListItem>
     </>
@@ -69,6 +70,11 @@ const StyledListItem = styled.section`
 
   & :nth-child(2) {
     margin-top: 16vh;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 `
 

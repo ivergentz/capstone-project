@@ -1,11 +1,11 @@
 import React from 'react'
-import DashboardPage from '../dashboardPage/DashboardPage'
+import AllRides from '../AllRides'
 
 export default {
   title: 'Rides List',
-  component: DashboardPage,
+  component: AllRides,
 }
 
-const Template = (args) => <DashboardPage {...args} />
+const Template = (args) => <AllRides {...args} />
 
 export const RidesList = Template.bind({})

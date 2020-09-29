@@ -1,8 +1,22 @@
-import React from 'react'
+import Axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as LogoSvg } from './image/riide.svg'
+import Rides from './RidesList'
 
-export default function DashboardPage(rides, isBookmarked) {
+export default function DashboardPage(isBookmarked) {
+  const [rides, setRides] = useState()
+
+  useEffect(() => {
+    Axios.get('http://localhost:5000/rides')
+      .then((response) => {
+        setRides(response.data)
+      })
+      .catch(function (error) {
+        console.log(error.response.data)
+      })
+  }, [])
+
   return (
     <>
       <Header>Deine Fahrten</Header>
@@ -10,6 +24,8 @@ export default function DashboardPage(rides, isBookmarked) {
         <LogoSvg />
       </LogoStyling>
       <NoRide>Noch keine Fahrt hinzugefügt</NoRide>
+      <Rides isBookmarked={isBookmarked} rides={rides} />
+      {console.log(rides)}
     </>
   )
 }
