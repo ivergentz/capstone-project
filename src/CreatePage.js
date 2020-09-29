@@ -14,7 +14,7 @@ const initialValues = {
 }
 
 const onSubmit = (values) => {
-  //hier muss die Logik des schreiben in die Datenbank rein
+  //hier muss die Logik des schreiben in die Datenbank rein, glaube ich
 }
 
 const validationSchema = Yup.object({
@@ -37,7 +37,7 @@ export default function Create() {
         >
           <Form>
             <LabelStyling htmlFor="rideDate">
-              Tell me more
+              Wann{' '}
               <Field name="rideDate">
                 {(props) => {
                   const { field, form, meta } = props
@@ -74,7 +74,7 @@ export default function Create() {
               </Field>
             </LabelStyling>
             <LabelStyling htmlFor="rideFrom">
-              Wohin des Weges{' '}
+              Wohin
               <Field name="rideFrom">
                 {(props) => {
                   const { field, form, meta } = props
@@ -112,7 +112,7 @@ export default function Create() {
             </LabelStyling>
 
             <LabelStyling htmlFor="rideDetails">
-              Tell me more
+              Was noch
               <Field name="rideDetails" placeholder="tell me about it">
                 {(props) => {
                   const { field, form, meta } = props
