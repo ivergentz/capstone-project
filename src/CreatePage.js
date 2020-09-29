@@ -1,7 +1,7 @@
 // import axios from 'axios'
 import React from 'react'
 import styled from 'styled-components/macro'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 
 const initialValues = {
@@ -10,10 +10,13 @@ const initialValues = {
   rideFrom: '',
   rideTo: '',
   rideDetails: '',
+
   //pass in initial values - must match form-attribute (to, from, time, date)
 }
 
-const onSubmit = (values) => {
+const onSubmit = (values, reset) => {
+  reset.resetForm()
+  // console.log('Form data', values)
   //hier muss die Logik des schreiben in die Datenbank rein, glaube ich
 }
 
@@ -34,6 +37,8 @@ export default function Create() {
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={onSubmit}
+          validationOnChange={false}
+          validateOnBlur={false}
         >
           <Form>
             <LabelStyling htmlFor="rideDate">
@@ -127,6 +132,13 @@ export default function Create() {
                 }}
               </Field>
             </LabelStyling>
+            {/* 
+            <div>
+              <label htmlFor="moreDetails">
+                Hier die "normale Version des einbindens"
+              </label>
+              <Field type="text" name="moreDetails" />
+            </div> */}
 
             <SubmitButton type="submit" value="Fahrt anlegen"></SubmitButton>
           </Form>
