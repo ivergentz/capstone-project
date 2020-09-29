@@ -1,8 +1,9 @@
-// import axios from 'axios'
+import axios from 'axios'
 import React from 'react'
 import styled from 'styled-components/macro'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import { v4 as uuidv4 } from 'uuid'
 
 const initialValues = {
   rideTime: '',
@@ -10,14 +11,25 @@ const initialValues = {
   rideFrom: '',
   rideTo: '',
   rideDetails: '',
-
-  //pass in initial values - must match form-attribute (to, from, time, date)
 }
 
-const onSubmit = (values, reset) => {
+const onSubmit = (value, reset) => {
   reset.resetForm()
-  // console.log('Form data', values)
-  //hier muss die Logik des schreiben in die Datenbank rein, glaube ich
+
+  const ride = {
+    id_: uuidv4(),
+    rideDate: value.rideDate,
+    rideTime: value.rideTime,
+    rideFrom: value.rideFrom,
+    rideTo: value.rideTo,
+  }
+
+  console.log('ride', ride)
+
+  axios
+    .post('http://localhost:5000/rides/', ride)
+    .then((res) => console.log(res.data))
+    .catch((error) => console.log(error.response))
 }
 
 const validationSchema = Yup.object({
@@ -45,7 +57,7 @@ export default function Create() {
               Wann{' '}
               <Field name="rideDate">
                 {(props) => {
-                  const { field, form, meta } = props
+                  const { field, meta } = props
                   return (
                     <>
                       <StyledInput
@@ -62,7 +74,7 @@ export default function Create() {
               </Field>
               <Field name="rideTime">
                 {(props) => {
-                  const { field, form, meta } = props
+                  const { field, meta } = props
                   return (
                     <>
                       <StyledInput
@@ -82,7 +94,7 @@ export default function Create() {
               Wohin
               <Field name="rideFrom">
                 {(props) => {
-                  const { field, form, meta } = props
+                  const { field, meta } = props
                   return (
                     <>
                       <StyledInput
@@ -99,7 +111,7 @@ export default function Create() {
               </Field>
               <Field name="rideTo">
                 {(props) => {
-                  const { field, form, meta } = props
+                  const { field, meta } = props
                   return (
                     <>
                       <StyledInput
@@ -120,7 +132,7 @@ export default function Create() {
               Was noch
               <Field name="rideDetails" placeholder="tell me about it">
                 {(props) => {
-                  const { field, form, meta } = props
+                  const { field, meta } = props
                   return (
                     <>
                       <StyledInput id="rideDetails" {...field} />
@@ -132,13 +144,6 @@ export default function Create() {
                 }}
               </Field>
             </LabelStyling>
-            {/* 
-            <div>
-              <label htmlFor="moreDetails">
-                Hier die "normale Version des einbindens"
-              </label>
-              <Field type="text" name="moreDetails" />
-            </div> */}
 
             <SubmitButton type="submit" value="Fahrt anlegen"></SubmitButton>
           </Form>
@@ -214,28 +219,3 @@ const SubmitButton = styled.input`
   border-radius: 25px;
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
-
-// const handleSubmit = (event) => {
-//   event.preventDefault()
-
-//   const ride = {
-//     rideDate: formik.value.rideDate,
-//     rideTime: formik.value.rideTime,
-//     rideFrom: formik.value.rideFrom,
-//     rideTo: formik.value.rideTo,
-//   }
-
-//   axios
-//     .post('http://localhost:5000/rides/', ride)
-//     .then((res) => console.log(res.data))
-
-//   window.location = '/create'
-// }
-
-// const formik = useFormik({
-//   initialValues,
-//   onSubmit,
-//   // validate,
-//   validationSchema,
-// })
-// console.log('Form visited', formik.touched)

@@ -20,10 +20,6 @@ const ridesSchema = new Schema(
       type: String,
       required: true,
     },
-    kind: {
-      type: String,
-      required: true,
-    },
   },
   { timestamps: true }
 )

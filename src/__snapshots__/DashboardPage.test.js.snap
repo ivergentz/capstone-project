@@ -3,12 +3,19 @@
 exports[`renders correctly 1`] = `
 Array [
   <h1
-    className="DashboardPage__Header-sc-1h5uo43-0 eqnTWm"
+    className="DashboardPage__Header-sc-1h5uo43-1 dzkLeD"
   >
     Deine Fahrten
   </h1>,
+  <div
+    className="DashboardPage__LogoStyling-sc-1h5uo43-0 bFIXSD"
+  >
+    <svg>
+      riide.svg
+    </svg>
+  </div>,
   <p
-    className="DashboardPage__NoRide-sc-1h5uo43-1 jrbDNi"
+    className="DashboardPage__NoRide-sc-1h5uo43-2 gEaQgV"
   >
     Noch keine Fahrt hinzugefügt
   </p>,

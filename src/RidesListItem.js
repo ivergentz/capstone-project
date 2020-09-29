@@ -24,7 +24,7 @@ export default function SingleRide({
   )
 
   useEffect(() => {
-    localStorage.setItem(_id, isBookmarked)
+    localStorage.setItem('isBookmarked', isBookmarked)
   }, [isBookmarked])
   return (
     <>
