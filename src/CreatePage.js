@@ -1,76 +1,136 @@
-import axios from 'axios'
-import React, { useState } from 'react'
+// import axios from 'axios'
+import React from 'react'
 import styled from 'styled-components/macro'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
+
+const initialValues = {
+  rideTime: '',
+  rideDate: '',
+  rideFrom: '',
+  rideTo: '',
+  rideDetails: '',
+  //pass in initial values - must match form-attribute (to, from, time, date)
+}
+
+const onSubmit = (values) => {
+  //hier muss die Logik des schreiben in die Datenbank rein
+}
+
+const validationSchema = Yup.object({
+  rideDate: Yup.string().required('Bitte Datum eintragen'),
+  rideTime: Yup.string().required('Bitte Zeit eintragen'),
+  rideFrom: Yup.string().required('Bitte Abfahrtsort eintragen'),
+  rideTo: Yup.string().required('Bitte Ankunftsort eintragen'),
+  rideDetails: Yup.string().required('Details bitte hier'),
+})
 
 export default function Create() {
-  const [rideDate, setRideDate] = useState('')
-  const [rideTime, setRideTime] = useState('')
-  const [rideFrom, setRideFrom] = useState('')
-  const [rideTo, setRideTo] = useState('')
-  const [kind, setKind] = useState('')
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    const ride = {
-      rideDate: rideDate,
-      rideTime: rideTime,
-      rideFrom: rideFrom,
-      rideTo: rideTo,
-      kind: kind,
-    }
-
-    axios
-      .post('http://localhost:5000/rides/', ride)
-      .then((res) => console.log(res.data))
-
-    window.location = '/create'
-  }
-
   return (
     <>
       <Header>Fahrt anlegen</Header>
       <Container>
-        <form
-          onSubmit={handleSubmit}
-          onChange={() => setKind('angebotene Fahrt')}
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={onSubmit}
         >
-          <LabelStyling>
-            Wann willst du fahren?
-            <InputDetails
-              placeholder="DD/MM/YYYY"
-              format="DD/MM/YYYY"
-              required
-              value={rideDate}
-              onChange={(date) => setRideDate(date.target.value)}
-            ></InputDetails>
-            <InputDetails
-              placeholder="HH:MM"
-              type="text"
-              required
-              value={rideTime}
-              onChange={(time) => setRideTime(time.target.value)}
-            />
-          </LabelStyling>
-          <LabelStyling>
-            Wohin willst du fahren?
-            <InputDetails
-              placeholder="Ab"
-              type="text"
-              required
-              value={rideFrom || ''}
-              onChange={(from) => setRideFrom(from.target.value)}
-            />
-            <InputDetails
-              placeholder="Nach"
-              type="text"
-              required
-              value={rideTo}
-              onChange={(to) => setRideTo(to.target.value)}
-            />
-          </LabelStyling>
-          <SubmitButton type="submit" value="Fahrt anlegen"></SubmitButton>
-        </form>
+          <Form>
+            <LabelStyling htmlFor="rideDate">
+              Tell me more
+              <Field name="rideDate">
+                {(props) => {
+                  const { field, form, meta } = props
+                  return (
+                    <>
+                      <StyledInput
+                        id="rideDate"
+                        placeholder="rideDate"
+                        {...field}
+                      />
+                      {meta.touched && meta.error ? (
+                        <ErrorMsg>{meta.error}</ErrorMsg>
+                      ) : null}
+                    </>
+                  )
+                }}
+              </Field>
+              <Field name="rideTime">
+                {(props) => {
+                  const { field, form, meta } = props
+                  return (
+                    <>
+                      <StyledInput
+                        id="rideTime"
+                        placeholder="rideTime"
+                        {...field}
+                      />
+                      {meta.touched && meta.error ? (
+                        <ErrorMsg>{meta.error}</ErrorMsg>
+                      ) : null}
+                    </>
+                  )
+                }}
+              </Field>
+            </LabelStyling>
+            <LabelStyling htmlFor="rideFrom">
+              Wohin des Weges{' '}
+              <Field name="rideFrom">
+                {(props) => {
+                  const { field, form, meta } = props
+                  return (
+                    <>
+                      <StyledInput
+                        id="rideFrom"
+                        placeholder="rideFrom"
+                        {...field}
+                      />
+                      {meta.touched && meta.error ? (
+                        <ErrorMsg>{meta.error}</ErrorMsg>
+                      ) : null}
+                    </>
+                  )
+                }}
+              </Field>
+              <Field name="rideTo">
+                {(props) => {
+                  const { field, form, meta } = props
+                  return (
+                    <>
+                      <StyledInput
+                        id="rideTo"
+                        placeholder="rideTo"
+                        {...field}
+                      />
+                      {meta.touched && meta.error ? (
+                        <ErrorMsg>{meta.error}</ErrorMsg>
+                      ) : null}
+                    </>
+                  )
+                }}
+              </Field>
+            </LabelStyling>
+
+            <LabelStyling htmlFor="rideDetails">
+              Tell me more
+              <Field name="rideDetails" placeholder="tell me about it">
+                {(props) => {
+                  const { field, form, meta } = props
+                  return (
+                    <>
+                      <StyledInput id="rideDetails" {...field} />
+                      {meta.touched && meta.error ? (
+                        <ErrorMsg>{meta.error}</ErrorMsg>
+                      ) : null}
+                    </>
+                  )
+                }}
+              </Field>
+            </LabelStyling>
+
+            <SubmitButton type="submit" value="Fahrt anlegen"></SubmitButton>
+          </Form>
+        </Formik>
       </Container>
     </>
   )
@@ -94,7 +154,16 @@ const LabelStyling = styled.label`
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
 
-const InputDetails = styled.input`
+const ErrorMsg = styled.div`
+  color: red;
+  font-size: 0.5em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+`
+
+const StyledInput = styled.input`
+  width: 75vw;
   color: var(--button-nav);
   height: 4em;
   display: flex;
@@ -133,3 +202,28 @@ const SubmitButton = styled.input`
   border-radius: 25px;
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
+
+// const handleSubmit = (event) => {
+//   event.preventDefault()
+
+//   const ride = {
+//     rideDate: formik.value.rideDate,
+//     rideTime: formik.value.rideTime,
+//     rideFrom: formik.value.rideFrom,
+//     rideTo: formik.value.rideTo,
+//   }
+
+//   axios
+//     .post('http://localhost:5000/rides/', ride)
+//     .then((res) => console.log(res.data))
+
+//   window.location = '/create'
+// }
+
+// const formik = useFormik({
+//   initialValues,
+//   onSubmit,
+//   // validate,
+//   validationSchema,
+// })
+// console.log('Form visited', formik.touched)
