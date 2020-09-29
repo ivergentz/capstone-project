@@ -33,8 +33,10 @@ const onSubmit = (value, reset) => {
 }
 
 const validationSchema = Yup.object({
-  rideDate: Yup.string().required('Bitte Datum eintragen'),
-  rideTime: Yup.string().required('Bitte Zeit eintragen'),
+  rideDate: Yup.string().required('Bitte Datum eintragen').min(8),
+
+  rideTime: Yup.string().required('Bitte Zeit eintragen').min(5).max(5),
+
   rideFrom: Yup.string().required('Bitte Abfahrtsort eintragen'),
   rideTo: Yup.string().required('Bitte Ankunftsort eintragen'),
   rideDetails: Yup.string().required('Details bitte hier'),
@@ -60,11 +62,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput
-                        id="rideDate"
-                        placeholder="rideDate"
-                        {...field}
-                      />
+                      <StyledInput placeholder="rideDate" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -77,11 +75,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput
-                        id="rideTime"
-                        placeholder="rideTime"
-                        {...field}
-                      />
+                      <StyledInput placeholder="rideTime" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -97,11 +91,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput
-                        id="rideFrom"
-                        placeholder="rideFrom"
-                        {...field}
-                      />
+                      <StyledInput placeholder="rideFrom" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -114,11 +104,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput
-                        id="rideTo"
-                        placeholder="rideTo"
-                        {...field}
-                      />
+                      <StyledInput placeholder="rideTo" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -130,12 +116,12 @@ export default function Create() {
 
             <LabelStyling htmlFor="rideDetails">
               Was noch
-              <Field name="rideDetails" placeholder="tell me about it">
+              <Field name="rideDetails">
                 {(props) => {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput id="rideDetails" {...field} />
+                      <StyledInput placeholder="tell me about it" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}

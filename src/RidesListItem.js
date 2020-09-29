@@ -40,7 +40,7 @@ export default function SingleRide({
           <p>{rideDate}</p>
           {isToggled && <p>{rideTime}</p>}
           {isToggled && <p>{rideTo}</p>}
-          {isToggled && <a href="mailto:info«riide.com">&#9993;</a>}
+          {isToggled && <a href="mailto:info@riide.com">&#9993;</a>}
         </RideEntry>
       </StyledListItem>
     </>
