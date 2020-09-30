@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 SingleRide.propTypes = {
   _id: PropTypes.string.isRequired,
-  kind: PropTypes.string.isRequired,
   rideDate: PropTypes.string.isRequired,
   rideTime: PropTypes.string.isRequired,
   rideFrom: PropTypes.string.isRequired,
@@ -24,8 +23,20 @@ export default function SingleRide({
   )
 
   useEffect(() => {
-    localStorage.setItem('isBookmarked', isBookmarked)
-  }, [isBookmarked])
+    localStorage.setItem(_id, isBookmarked)
+  }, [isBookmarked]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const Mailto = ({ children, _id }) => {
+    return (
+      <a
+        href={`mailto:riide@info.com?subject=Riide Anfrage ID#${
+          encodeURIComponent(_id) || ''
+        }`}
+      >
+        {children}
+      </a>
+    )
+  }
   return (
     <>
       <StyledListItem onClick={toggleRideDetails} key={_id}>
@@ -40,7 +51,7 @@ export default function SingleRide({
           <p>{rideDate}</p>
           {isToggled && <p>{rideTime}</p>}
           {isToggled && <p>{rideTo}</p>}
-          {isToggled && <a href="mailto:info@riide.com">&#9993;</a>}
+          {isToggled && <Mailto _id={_id}>&#9993;</Mailto>}
         </RideEntry>
       </StyledListItem>
     </>
