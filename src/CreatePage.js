@@ -34,9 +34,7 @@ const onSubmit = (value, reset) => {
 
 const validationSchema = Yup.object({
   rideDate: Yup.string().required('Bitte Datum eintragen').min(8),
-
   rideTime: Yup.string().required('Bitte Zeit eintragen').min(5).max(5),
-
   rideFrom: Yup.string().required('Bitte Abfahrtsort eintragen'),
   rideTo: Yup.string().required('Bitte Ankunftsort eintragen'),
   rideDetails: Yup.string().required('Details bitte hier'),

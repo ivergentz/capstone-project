@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as LogoSvg } from './image/riide.svg'
 import Rides from './RidesList'
+import SingleRide from './AllRides'
 
-export default function DashboardPage(isBookmarked) {
+export default function DashboardPage(_id, isBookmarked) {
   const [rides, setRides] = useState()
 
   useEffect(() => {
@@ -17,15 +18,23 @@ export default function DashboardPage(isBookmarked) {
       })
   }, [])
 
+  useEffect(() => {
+    localStorage.getItem(_id, isBookmarked)
+  }, [isBookmarked])
+  // console.log(isBookmarked)
+  console.log(_id)
+
   return (
     <>
-      <Header>Deine Fahrten</Header>
-      <LogoStyling>
+      {/* <Header>Deine Fahrten</Header> */}
+      {isBookmarked ? <SingleRide _id={_id} /> : 'asdf'}
+      {/* <LogoStyling>
         <LogoSvg />
-      </LogoStyling>
-      <NoRide>Noch keine Fahrt hinzugefügt</NoRide>
-      <Rides isBookmarked={isBookmarked} rides={rides} />
-      {console.log(rides)}
+      </LogoStyling> */}
+      {/* <NoRide>Noch keine Fahrt hinzugefügt</NoRide> */}
+      {/* <Rides isBookmarked={isBookmarked} rides={rides} /> */}
+      {/* {console.log('rides', rides)} */}
+      {/* {console.log('Bookmark', isBookmarked)} */}
     </>
   )
 }
