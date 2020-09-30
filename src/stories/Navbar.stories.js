@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../navigation/Navigation'
+import NavBar from '../Navigation'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 export default {

@@ -1,6 +1,6 @@
 import React from 'react'
-import ListItem from '../dashboardPage/RidesListItem'
-import rides from '../data/rides.json'
+import ListItem from '../RidesListItem'
+import rides from '../AllRides'
 
 export default {
   title: 'Single Ride',

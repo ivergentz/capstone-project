@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import Navbar from './navigation/Navigation'
+import Navbar from './Navigation'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import CreatePage from './createPage/CreatePage'
-import SearchPage from './searchPage/SearchPage'
-import DashboardPage from './dashboardPage/DashboardPage'
+import CreatePage from './CreatePage'
+import DashboardPage from './DashboardPage'
+import AllRides from './AllRides'
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
       <Router>
         <PageLayout>
           <Switch>
-            <Route path="/search" component={SearchPage}></Route>
+            <Route path="/search" component={AllRides}></Route>
             <Route path="/create" component={CreatePage}></Route>
             <Route path="/" component={DashboardPage}></Route>
           </Switch>
@@ -29,7 +29,7 @@ const PageLayout = styled.div`
   border-radius: 0 0 40px 40px;
   overflow: scroll;
   scroll-behavior: smooth;
-  box-shadow: 1px 2px 2px 1px rgba(0, 51, 0, 0.2);
+  box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
 `
 
 const Pagebody = styled.div`
