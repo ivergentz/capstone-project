@@ -26,17 +26,21 @@ export default function SingleRide({
     localStorage.setItem(_id, isBookmarked)
   }, [isBookmarked]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const Mailto = ({ children, _id }) => {
+  const Mailto = ({ children, _id, rideDate, rideTime, rideFrom, rideTo }) => {
+    const formattedBody =
+      'Liebes Riide-Team,  \n hiermit Frage ich o.g. Fahrt zur Buchung an. \n\n '
+
     return (
       <a
         href={`mailto:riide@info.com?subject=Riide Anfrage ID#${
-          encodeURIComponent(_id) || ''
-        }`}
+          encodeURIComponent(_id) || 'asdf'
+        }&body=${encodeURIComponent(formattedBody) || ''}`}
       >
         {children}
       </a>
     )
   }
+
   return (
     <>
       <StyledListItem onClick={toggleRideDetails} key={_id}>
@@ -47,11 +51,24 @@ export default function SingleRide({
           &hearts;
         </BookmarkSymbol>
         <RideEntry>
-          <p>{rideFrom}</p>
-          <p>{rideDate}</p>
-          {isToggled && <p>{rideTime}</p>}
-          {isToggled && <p>{rideTo}</p>}
-          {isToggled && <Mailto _id={_id}>&#9993;</Mailto>}
+          <GridLeft>
+            <p>Abfahrtsort</p>
+          </GridLeft>
+          <GridRight>{rideFrom}</GridRight>
+          <GridLeft>
+            <p>Datum</p>
+          </GridLeft>
+          <GridRight>{rideDate}</GridRight>
+          <GridLeft>Ankunftsort</GridLeft>
+          <GridRight>{rideTo}</GridRight>
+          {isToggled && <GridLeft>Zeit</GridLeft>}
+          {isToggled && <GridRight>{rideTime}</GridRight>}
+          {isToggled && <GridLeft>Buchen</GridLeft>}
+          {isToggled && (
+            <GridRight>
+              <Mailto _id={_id}>&#9993;</Mailto>{' '}
+            </GridRight>
+          )}
         </RideEntry>
       </StyledListItem>
     </>
@@ -100,6 +117,7 @@ const BookmarkSymbol = styled.button`
   border-radius: 10px;
   border: none;
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
+  z-index: 50;
 
   &.active {
     background: var(--button-green);
@@ -107,7 +125,21 @@ const BookmarkSymbol = styled.button`
 `
 
 const RideEntry = styled.p`
-  font-weight: 300;
+  display: grid;
+  row-gap: 1em;
+  grid-template-columns: 2;
+  grid-template-rows: auto;
   color: var(--button-nav);
   width: auto;
+`
+const GridRight = styled.p`
+  margin-left: 0.5em;
+  grid-column-start: 1;
+  grid-column-end: 2;
+`
+
+const GridLeft = styled.p`
+  grid-column-start: 0;
+  grid-column-end: 1;
+  font-size: 0.7em;
 `

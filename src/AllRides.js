@@ -38,4 +38,5 @@ const Header = styled.h1`
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
   position: fixed;
   width: 100%;
+  z-index: 100;
 `

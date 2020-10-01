@@ -26,15 +26,15 @@ export default function DashboardPage(_id, isBookmarked) {
 
   return (
     <>
-      {/* <Header>Deine Fahrten</Header> */}
-      {isBookmarked ? <SingleRide _id={_id} /> : 'asdf'}
-      {/* <LogoStyling>
+      <Header>Meine Fahrten</Header>
+      {/* {isBookmarked ? <Rides _id={_id} /> : 'asdf'} */}
+      <LogoStyling>
         <LogoSvg />
-      </LogoStyling> */}
-      {/* <NoRide>Noch keine Fahrt hinzugefügt</NoRide> */}
+      </LogoStyling>
+      <NoRide>Noch keine Fahrt hinzugefügt</NoRide>
       {/* <Rides isBookmarked={isBookmarked} rides={rides} /> */}
       {/* {console.log('rides', rides)} */}
-      {/* {console.log('Bookmark', isBookmarked)} */}
+      {/* {console.log('Bookmark', isBookmarked)}*/}
     </>
   )
 }

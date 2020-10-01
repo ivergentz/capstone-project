@@ -40,7 +40,7 @@ const validationSchema = Yup.object({
   rideDetails: Yup.string().required('Details bitte hier'),
 })
 
-export default function Create() {
+export default function Create(_id) {
   return (
     <>
       <Header>Fahrt anlegen</Header>
@@ -54,13 +54,13 @@ export default function Create() {
         >
           <Form>
             <LabelStyling htmlFor="rideDate">
-              Wann{' '}
+              Wann
               <Field name="rideDate">
                 {(props) => {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput placeholder="rideDate" {...field} />
+                      <StyledInput placeholder="Datum: TT.MM.JJJJ" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -73,7 +73,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput placeholder="rideTime" {...field} />
+                      <StyledInput placeholder="Uhrzeit: HH:MM" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -89,7 +89,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput placeholder="rideFrom" {...field} />
+                      <StyledInput placeholder="Abfahrtsort (Bhf)" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -102,7 +102,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
-                      <StyledInput placeholder="rideTo" {...field} />
+                      <StyledInput placeholder="Ankunftsort (Bhf)" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -119,6 +119,7 @@ export default function Create() {
                   const { field, meta } = props
                   return (
                     <>
+                      <input type="checkbox"></input>
                       <StyledInput placeholder="tell me about it" {...field} />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
