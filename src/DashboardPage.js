@@ -15,7 +15,7 @@ export default function DashboardPage(_id, isBookmarked) {
   return (
     <>
       <Header>Meine Fahrten</Header>
-      {isBookmarked ? (
+      {!isBookmarked ? (
         <Container>
           <Rides />
         </Container>
