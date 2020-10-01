@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { string } = require('yup')
 
 const Schema = mongoose.Schema
 
@@ -19,6 +20,9 @@ const ridesSchema = new Schema(
     rideTo: {
       type: String,
       required: true,
+    },
+    rideDetails: {
+      type: String,
     },
   },
   { timestamps: true }

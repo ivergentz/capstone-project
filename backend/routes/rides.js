@@ -12,14 +12,14 @@ router.route('/').post((req, res) => {
   const rideTime = req.body.rideTime
   const rideFrom = req.body.rideFrom
   const rideTo = req.body.rideTo
-  const kind = req.body.kind
+  const rideDetails = req.body.rideDetails
 
   const newRide = new Ride({
     rideDate,
     rideTime,
     rideFrom,
     rideTo,
-    kind,
+    rideDetails,
   })
 
   newRide
@@ -41,7 +41,7 @@ router.route('/:id').post((req, res) => {
       rides.rideTime = req.body.rideTime
       rides.rideFrom = req.body.rideFrom
       rides.rideTo = req.body.rideTo
-      rides.kind = req.body.kind
+      rides.rideDetails = req.body.kind
 
       rides
         .save()

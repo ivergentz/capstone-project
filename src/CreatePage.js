@@ -22,6 +22,7 @@ const onSubmit = (value, reset) => {
     rideTime: value.rideTime,
     rideFrom: value.rideFrom,
     rideTo: value.rideTo,
+    rideDetails: value.rideDetails,
   }
 
   console.log('ride', ride)
@@ -37,7 +38,7 @@ const validationSchema = Yup.object({
   rideTime: Yup.string().required('Bitte Zeit eintragen').min(5).max(5),
   rideFrom: Yup.string().required('Bitte Abfahrtsort eintragen'),
   rideTo: Yup.string().required('Bitte Ankunftsort eintragen'),
-  rideDetails: Yup.string().required('Details bitte hier'),
+  rideDetails: Yup.string().required('Bitte weitere Infos zur Fahrt angeben'),
 })
 
 export default function Create(_id) {
@@ -112,15 +113,30 @@ export default function Create(_id) {
               </Field>
             </LabelStyling>
 
-            <LabelStyling htmlFor="rideDetails">
-              Was noch
+            <LabelStyling htmlFor="rideDetails" className="rideDetails">
+              Weitere Details zur Fahrt{' '}
               <Field name="rideDetails">
                 {(props) => {
                   const { field, meta } = props
                   return (
                     <>
-                      <input type="checkbox"></input>
-                      <StyledInput placeholder="tell me about it" {...field} />
+                      {/* <GridLeft htmlFor="checkboxCarry">
+                        Hilfe beim Gepäck
+                      </GridLeft>
+                      <StyledInputRight
+                        type="checkbox"
+                        name="checkboxCarry"
+                        id="checkBoxCarry"
+                      ></StyledInputRight>
+                      <GridLeft htmlFor="track">Abfahrt von Gleis</GridLeft>
+                      <StyledInputRight
+                        type="input"
+                        name="track"
+                      ></StyledInputRight> */}
+                      <StyledInput
+                        placeholder="Gleis, Treffpunkt, Art der Hilfe..."
+                        {...field}
+                      />
                       {meta.touched && meta.error ? (
                         <ErrorMsg>{meta.error}</ErrorMsg>
                       ) : null}
@@ -154,6 +170,16 @@ const LabelStyling = styled.label`
   background: var(--back-light);
   border-radius: 25px;
   box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
+`
+const GridLeft = styled.label`
+  grid-column-start: 0;
+  grid-column-end: 1;
+  font-size: 0.7em;
+`
+const StyledInputRight = styled.input`
+  grid-column-start: 0;
+  grid-column-end: 1;
+  font-size: 0.7em;
 `
 
 const ErrorMsg = styled.div`

@@ -8,6 +8,7 @@ SingleRide.propTypes = {
   rideTime: PropTypes.string.isRequired,
   rideFrom: PropTypes.string.isRequired,
   rideTo: PropTypes.string.isRequired,
+  rideDetails: PropTypes.string.isRequired,
 }
 
 export default function SingleRide({
@@ -16,6 +17,7 @@ export default function SingleRide({
   rideFrom,
   rideTo,
   _id,
+  rideDetails,
 }) {
   const [isToggled, setIsToggled] = useState(false)
   const [isBookmarked, setIsBookmarked] = useState(
@@ -26,7 +28,7 @@ export default function SingleRide({
     localStorage.setItem(_id, isBookmarked)
   }, [isBookmarked]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const Mailto = ({ children, _id, rideDate, rideTime, rideFrom, rideTo }) => {
+  const Mailto = ({ children, _id }) => {
     const formattedBody =
       'Liebes Riide-Team,  \n hiermit Frage ich o.g. Fahrt zur Buchung an. \n\n '
 
@@ -69,6 +71,8 @@ export default function SingleRide({
               <Mailto _id={_id}>&#9993;</Mailto>{' '}
             </GridRight>
           )}
+          {isToggled && <GridLeft>Infos</GridLeft>}
+          {isToggled && <GridRight>{rideDetails}</GridRight>}
         </RideEntry>
       </StyledListItem>
     </>
