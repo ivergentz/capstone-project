@@ -8,13 +8,13 @@ import { ReactComponent as HomeSvg } from './image/train.svg'
 export default function Navbar() {
   return (
     <NavBar>
-      <NavLink activeStyle={{ fill: 'var(--button-nav)' }} to="/search">
+      <NavLink activeStyle={{ fill: 'var(--button-green)' }} to="/search">
         <SearchSvg />
       </NavLink>
-      <NavLink activeStyle={{ fill: 'var(--button-nav)' }} exact to="/">
+      <NavLink activeStyle={{ fill: 'var(--button-green)' }} exact to="/">
         <HomeSvg />
       </NavLink>
-      <NavLink activeStyle={{ fill: 'var(--button-nav)' }} to="/create">
+      <NavLink activeStyle={{ fill: 'var(--button-green)' }} to="/create">
         <AddSvg />
       </NavLink>
     </NavBar>
@@ -27,7 +27,11 @@ const NavBar = styled.nav`
   margin-top: 1rem;
 
   svg {
-    height: 40px;
-    width: 40px;
+    /* background: var(--button-green); */
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgba(20, 20, 20, 0.2);
+    padding: 10px;
+    height: 50px;
+    width: 50px;
   }
 `

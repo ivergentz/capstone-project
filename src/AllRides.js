@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Rides from './RidesList'
 
-export default function AllRides() {
+export default function AllRides(_id) {
   const [rides, setRides] = useState([])
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function AllRides() {
     <>
       <Header>Fahrt finden</Header>
 
-      <Rides rides={rides} />
+      <Rides key={_id} rides={rides} />
     </>
   )
 }
